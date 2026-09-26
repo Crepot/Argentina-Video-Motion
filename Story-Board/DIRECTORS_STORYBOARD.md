@@ -300,39 +300,62 @@ then
 
 **Remotion / SVG feasibility:** Routes generated from cubic beziers; vehicle symbols orient from path tangents. Rail lines share the route path, adding sleepers at fixed arc-length intervals. City growth uses modular façade components and masks, not hundreds of unique drawings.
 
-## 09 — Mass politics and interrupted institutions
+## 09 — Mass politics → era of violence
 
 **Timestamp / duration:** `00:45–00:52` · **7 s**  
 **Historical period:** `1930–1976`
 
 **On-screen text:**
 
-> 1930–1976  
-> INDUSTRIA · MULTITUDES · RUPTURAS
+> 1930 · RUPTURA INSTITUCIONAL
+
+then, in rapid succession:
+
+> 1946 · PERONISMO  
+> INDUSTRIA · TRABAJO · MOVILIZACIÓN
+
+> 1955–1969  
+> PROSCRIPCIÓN · INESTABILIDAD
+
+> 1969–1976  
+> RADICALIZACIÓN · VIOLENCIA POLÍTICA
+
+Brief factual actor label:
+
+> MONTONEROS · ERP  
+> ORGANIZACIONES ARMADAS
 
 **Anthem:**
 
 > ¡AL GRAN PUEBLO ARGENTINO, SALUD!
 
-**Starting composition:** Factory-window geometry grows from the railway switch. Beyond it, the Congreso dome, Casa Rosada balcony line, smokestacks, microphones, and a broad Plaza de Mayo axis coexist as one editorial city section.
+The phrase belongs to the mass-political/civic scale of the 1940s–1950s beat, not to an individual leader, party, or armed actor; it recedes before the later escalation.
 
-**Animation / action:** A horizontal civic timeline moves beneath the architecture. It repeatedly advances, then is interrupted by narrow vertical cuts marking coups; it resumes each time rather than becoming a partisan chronology. Workers and crowd silhouettes fill the plaza in waves. Perón and Eva may appear as two recognizable but highly simplified balcony/microphone silhouettes for under one second, integrated among larger crowds rather than treated as portraits. Industrial pistons, ballot marks, and broadcast rings share one rhythm.
+**Starting composition:** Factory-window geometry grows from the railway switch. Beyond it, the Congreso dome, Casa Rosada balcony line, smokestacks, microphones, and a broad Plaza de Mayo axis coexist as one editorial city section. A continuous deep-blue civic timeline runs beneath them.
 
-**Camera:** Faster lateral tracking through a layered urban panorama. Brief push toward the balcony, immediately followed by a wider pullback to the people and institutions.
+**Animation / action:** The seven seconds operate as a legible compressed chronology:
 
-**Color treatment:** Denser deep blue, sky-blue crowd flags, neutral warm grays for concrete/industry. Still a light composition with ample ivory sky.
+- **`00:45–00:46.2` — 1930s:** a narrow military interruption cuts the civic line at `1930`; the line resumes while factory windows, worker routes, and urban blocks expand. The coup is a break, not a heroic impact.
+- **`00:46.2–00:48.5` — 1940s–1950s:** industrial and worker routes converge on Plaza de Mayo. `1946 · PERONISMO` appears. Perón is present for roughly 18–22 frames as a simplified balcony/microphone silhouette within the crowd system. Eva appears adjacent for only 8–10 frames, then her contour dissolves into a broadcast ring and the larger crowd. Neither receives portrait detail, caricature, isolated framing, or gold.
+- **`00:48.5–00:49.7` — 1955–1969:** a second institutional cut marks `1955`; ballot/civic routes reopen and close through alternating straight civilian segments and rigid military bars. A thin `PROSCRIPCIÓN` bracket blocks one political route while the national timeline continues. Further interruptions remain quick and chronological rather than becoming equal-sized title cards.
+- **`00:49.7–00:51.4` — late 1960s/1970s escalation:** the atlas becomes visibly unstable. Civic protest/crowd routes retain rounded ends; armed political trajectories use angular arrowheads and weapon-neutral chevrons. `MONTONEROS` and `ERP` appear briefly beside two distinct dashed path patterns under the shared factual label `ORGANIZACIONES ARMADAS`. Their lines cross but do not replace the broader field of workers, students, parties, unions, institutions, and civilians. Abstract street silhouettes, smoke hatching, radio bursts, and newspaper rules communicate conflict without graphic violence.
+- **`00:51.4–00:52` — breakdown and takeover:** other political violence and historically situated para-state violence enter as broken bracketed routes emerging from partially obscured power nodes; military/security repression enters as rigid parallel lines attached to institutional geometry. These systems are not made visually equivalent: they have different origins, legal/institutional positions, scales, and consequences. As instability peaks, the civilian/government baseline stops. Military geometry occupies the institutional layer and a small `1976` appears in the map margin—no `24 MAR`, no title-card impact, no celebratory cadence.
 
-**Gold:** Tiny institutional ticks on the timeline; each is interrupted when the line breaks. No gold on political figures.
+**Camera:** Fast lateral tracking along the timeline with short, readable decelerations at 1930, 1946, 1955, and the late-1960s turn. A restrained push toward the Peronist balcony immediately widens to the crowd. During the final 2.3 seconds, the camera loses its stable horizon by only 4–6° as competing lines overwhelm the atlas; military control restores rigid alignment, but as confinement rather than calm.
 
-**Transition:** The final vertical interruption expands into a pale empty band. Crowds and buildings continue on either side, but paths entering the band stop and vanish.
+**Color treatment:** Denser deep blue, sky-blue civic/crowd lines, and neutral warm grays for industry, smoke, and conflict. Actor systems are distinguished primarily by topology, dash pattern, origin layer, and arrow shape—not partisan color. The paper remains ivory and the composition remains light even as line density rises.
 
-**Musical energy:** **DRIVING / TENSE**, intensity 7→8→5.
+**Gold:** Tiny institutional ticks disappear after the first interruption. No political figure, party, armed organization, military actor, or violent trajectory receives gold.
 
-**Suggested SFX:** Machinery pulse, radio static, crowd swell, microphone feedback hint, abrupt tape-stop at the final interruption.
+**Transition:** No coup title card. The accumulated conflict lines jam the civic network; the government baseline stops mid-stroke. Rigid military/security lines seize its anchor points, rotate the institutional grid to orthogonal alignment, and carry the camera into Scene 10. Crowds and buildings remain at the edges while paths entering the controlled zone are intercepted.
 
-**Remotion / SVG feasibility:** Modular city panorama in 3–4 parallax layers. Timeline interruptions are clip-path shutters. Crowd cycles should use seeded variations and low-frequency motion; the two leaders are static signature silhouettes with no facial detail.
+**Musical energy:** **DRIVING → FRACTURED → TENSE**, intensity 6→8→3. The Peronist mass-politics beat broadens briefly; from 1955 onward, repeated interruptions and competing rhythms destabilize it. The takeover removes rhythmic layers instead of producing a climax.
 
-## 10 — The atlas is wounded
+**Suggested SFX:** Machinery pulse, short radio/news bursts, crowd swell, microphone resonance, paper/newspaper flicks, distant non-literal street impacts, rising interference, then a hard relay click and controlled room tone as the institutional line stops.
+
+**Remotion / SVG feasibility:** Modular city panorama in 3–4 parallax layers. A shared `ConflictLine` schema should encode `actorClass`, `institutionalOrigin`, `dashPattern`, `arrowType`, `legalPosition`, and `timeRange`, ensuring that civic protest, Montoneros, ERP, para-state violence, and military/security repression never collapse into one generic visual style. Timeline interruptions are clip-path shutters. Crowd cycles use seeded variations. Perón and Eva are separate static signature silhouettes with hard maximum frame durations and no facial detail.
+
+## 10 — Institutions under military control
 
 **Timestamp / duration:** `00:52–00:57` · **5 s**  
 **Historical period:** `1976–1983`
@@ -340,27 +363,27 @@ then
 **On-screen text:**
 
 > 1976–1983  
-> DICTADURA · TERRORISMO DE ESTADO
+> DICTADURA
 
 **Anthem:** None.
 
-**Starting composition:** The pale interruption band fills the frame. Only fragments of the city grid remain near the edges; the center is large, unprinted ivory-gray space.
+**Starting composition:** The military geometry inherited from Scene 09 now occupies the institutional grid. A small `1976` sits at the margin rather than at the center. Congreso, broadcast, ministry, and civic nodes remain recognizable but are held inside rigid parallel boundaries; public space opens into an unnaturally empty ivory-gray center.
 
-**Animation / action:** A civic route tries to cross. Its nodes dim one at a time and some disappear, leaving empty coordinate rings. Fine parallel lines suggest controlled space and censorship without depicting instruments of violence. A restrained ring of white headscarf-like marks may orbit the Plaza de Mayo coordinate—abstract, quiet, historically specific, and subject to verification—while the main timeline becomes discontinuous.
+**Animation / action:** Institutional control precedes absence. Orthogonal state/security lines close around Congress, broadcast, ministry, university, union, and street-network nodes. Censorship appears as pale shutters that erase portions of newspapers and radio waves; surveillance appears as narrow scan arcs and repeated coordinate boxes. Civic routes attempting to cross are intercepted. Some nodes dim; others are removed completely, leaving exact empty coordinate rings that represent disappearances without depicting victims or violence. Repression lines originate from and return to the controlling state/security grid, clearly distinguishing state terrorism and institutional capacity from the preceding armed-organizational paths. Public silhouettes withdraw until the plaza and streets feel exposed and unsafe. No human-rights organization or individualized emblem is used; the subject is the damaged national social and institutional fabric.
 
-**Camera:** Nearly static. A very slow backward drift increases the emptiness. Motion does not stop completely; the paper still breathes.
+**Camera:** Nearly static. A very slow backward drift reveals that the controlled grid extends beyond the first institutions while the empty civic space grows. Motion does not stop completely; the paper still breathes.
 
 **Color treatment:** Pale gray-blue, desaturated sky blue, softened deep blue. Background remains light. Contrast is lowered, not inverted.
 
 **Gold:** Removed entirely.
 
-**Transition:** A surviving rectangular grid at the edge expands into pitch markings. The missing coordinate rings remain faintly visible outside the pitch, so 1978 is visibly contained within the dictatorship rather than detached from it.
+**Transition:** A surviving rectangular grid at the edge expands into pitch markings. State/security boundaries, censored text bars, and missing coordinate rings remain faintly visible outside the pitch, so 1978 is visibly contained within the dictatorship rather than detached from it.
 
 **Musical energy:** **RESTRAINED / SOLEMN**, intensity 2.
 
-**Suggested SFX:** Low room tone, distant footsteps, soft wind, short drop to near-silence as the nodes vanish.
+**Suggested SFX:** Low controlled room tone, distant footsteps, muted radio scan, paper shutter, relay clicks, soft wind, and a short drop to near-silence as nodes vanish.
 
-**Remotion / SVG feasibility:** Node disappearance is opacity plus a short masked erosion, not random particle decay. Use deterministic timing and generous holds. The headscarf-ring symbol requires historical review and respectful abstraction before production.
+**Remotion / SVG feasibility:** State/security geometry occupies a dedicated institutional layer, allowing its lines to lock, mask, or remove civic layers without suggesting equal opposing forces. Node disappearance is opacity plus a short masked erosion, not random particle decay. Censorship shutters and surveillance arcs use deterministic masks and generous holds. No organization-specific human-rights symbol is present.
 
 ## 11 — A compromised crown
 
@@ -398,7 +421,7 @@ then
 ## 12 — South Atlantic distance
 
 **Timestamp / duration:** `01:01–01:07` · **6 s**  
-**Historical year:** `1982`
+**Historical period:** `1982–1983`
 
 **On-screen text:**
 
@@ -409,6 +432,11 @@ Small cartographic label:
 
 > ISLAS MALVINAS · SOBERANÍA DISPUTADA
 
+Then, after the Malvinas hold:
+
+> 1983  
+> DEMOCRACIA
+
 **Anthem:**
 
 > O JUREMOS  
@@ -416,21 +444,21 @@ Small cartographic label:
 
 **Starting composition:** Continental Argentina appears at left; a great field of ivory-blue South Atlantic occupies most of the frame. The former stadium ellipse is now a wind contour crossing the sea.
 
-**Animation / action:** The camera follows a measured southeast bearing. Coordinates tick past slowly, making distance the dominant fact. Naval and air routes appear as thin interrupted paths; none reaches its endpoint with a flourish. The islands resolve from ocean hatching. Minimal soldier silhouettes are seen from behind at the lower edge, small against sea and weather. A route stops before the lyric finishes; the held gap is the emotional center.
+**Animation / action:** For approximately the first 4.7 seconds, the existing Malvinas treatment is preserved: the camera follows a measured southeast bearing; coordinates tick past slowly, making distance the dominant fact. Naval and air routes appear as thin interrupted paths; none reaches its endpoint with a flourish. The islands resolve from ocean hatching. Minimal soldier silhouettes are seen from behind at the lower edge, small against sea and weather. A route stops before the lyric finishes; the held gap is the emotional center. During the final approximately 1.3 seconds, the wider national timeline advances from that held gap to `1983`. The camera pulls back enough to recover the mainland edge; the broken civic line reconnects, the closed institutional grid releases its masks, and three civic nodes—Congress, ballot, public route—reopen. `1983 · DEMOCRACIA` appears briefly. No individual leader is shown.
 
-**Camera:** Long diagonal traverse from Patagonia over open water, then a near-static hover above and west of the islands. No aggressive diving or battle choreography.
+**Camera:** Long diagonal traverse from Patagonia over open water, then a near-static hover above and west of the islands. No aggressive diving or battle choreography. After the solemn hold, a compact pullback—not a victory move—brings the mainland and reconnecting civic timeline back into view.
 
-**Color treatment:** Cold pale blue, deep-blue coordinate type, very low saturation. Mainland and islands are not given identical ownership fills; labeling and line style carry the claim/dispute accurately.
+**Color treatment:** Cold pale blue, deep-blue coordinate type, very low saturation. Mainland and islands are not given identical ownership fills; labeling and line style carry the claim/dispute accurately. In the final 1.3 seconds, sky blue returns gradually to civic nodes while the South Atlantic remains restrained.
 
 **Gold:** None.
 
-**Transition:** The stopped route curls into a small circle. A second circle appears; both become center-circle and ball marks as ocean parallels straighten into a football pitch. The wind does not vanish immediately—it becomes stadium air.
+**Transition:** The reconnected 1983 civic line passes through an open Congress/ballot node, then curves into the center circle of a football pitch. Ocean parallels and the newly reopened institutional grid straighten into touchlines. South Atlantic wind does not vanish immediately—it becomes stadium air. The transition moves from democratic restoration toward 1986 without implying that football caused or completed that restoration.
 
-**Musical energy:** **SOLEMN**, intensity 3→4, with a breath before transition.
+**Musical energy:** **SOLEMN → CAUTIOUSLY HOPEFUL**, intensity 3→4→5, with a breath after Malvinas and a brief harmonic reopening at `1983`.
 
-**Suggested SFX:** South Atlantic wind, low hull resonance, distant radio texture, then near-silence.
+**Suggested SFX:** South Atlantic wind, low hull resonance, distant radio texture, near-silence, then one soft ballot/paper contact and a restrained civic-room resonance as the line reconnects.
 
-**Remotion / SVG feasibility:** Ocean is procedural parallel curves and sparse stipple; coordinates move in a stable world-space projection. Islands use a simplified verified path. Route dash gaps are art-directed, not random. Label wording must remain legible at delivery resolution.
+**Remotion / SVG feasibility:** Ocean is procedural parallel curves and sparse stipple; coordinates move in a stable world-space projection. Islands use a simplified verified path. Route dash gaps are art-directed, not random. The final 40 frames carry a `CivicReconnection` state that reopens selected institutional nodes and hands its main path directly to the 1986 pitch. Label wording must remain legible at delivery resolution.
 
 ## 13 — The unfinished laurels
 
@@ -448,7 +476,7 @@ Small cartographic label:
 > SEAN ETERNOS  
 > LOS LAURELES…
 
-**Starting composition:** The ocean geometry has become an overhead football pitch. One sky-blue dot marked `10` waits left of center; several smaller deep-blue player marks establish opposition and space.
+**Starting composition:** The reopened 1983 civic grid and residual ocean geometry have become an overhead football pitch. One sky-blue dot marked `10` waits left of center; several smaller deep-blue player marks establish opposition and space.
 
 **Animation / action:** A single line accelerates from the `10`, bends through a choreographed series of spatial decisions, and reaches the goal. The dot expands into a compact Maradona motion silhouette—torso lean, low center of gravity, left-foot follow-through—then resolves into a trophy-lift pose. Gold grows along only the **left half** of a laurel ellipse. The winning line exits the trophy as a fine golden thread and embeds itself in the lower timeline, continuing invisibly toward the future. The ellipsis in the lyric is literal and important.
 
@@ -725,6 +753,17 @@ Small required cartographic notes:
 - Route taxonomy: dotted = planned/possible; solid sky blue = active connection; interrupted = broken/lost; double strand = memory across eras; gold core = achievement earned.
 - Every moving line has a semantic origin and destination. Decorative free-floating strokes are prohibited.
 
+### 1930–1983 conflict and institutional grammar
+
+- **Civic/institutional continuity:** continuous deep-blue baseline with round nodes; coups are cuts in that line, never gold impacts.
+- **Mass politics and peaceful civic mobilization:** sky-blue crowd waves and routes with rounded caps; labels remain separate from armed-actor labels.
+- **Montoneros and ERP:** two distinct dashed angular paths, both explicitly labeled `ORGANIZACIONES ARMADAS`; differences are encoded through dash pattern, timing, and route—not moralizing color or caricature.
+- **Other political/para-state violence:** broken bracketed routes tied only to historically verified nodes and dates; never a vague omnipresent haze.
+- **Military/security repression before 1976:** rigid parallel lines attached to security/institutional geometry; visually distinct from both armed organizations and civic protest.
+- **Dictatorship/state terrorism:** orthogonal state-control layer that closes institutions, censors information, intercepts civic routes, and removes nodes. Its ability to control the atlas distinguishes state power and responsibility; the design must not imply legal, institutional, moral, or quantitative equivalence among actors.
+- **1976 takeover:** small marginal year only. Control changes through layer occupation and the stopping of the government baseline, not through a heroic date or central title-card impact.
+- All conflict imagery remains abstract and non-graphic. Gold is prohibited throughout the actor/conflict system.
+
 ### Oceans
 
 - Represent water with widely spaced bathymetric curves, isobars, coordinate ticks, and sparse directional hatching.
@@ -800,6 +839,11 @@ Small required cartographic notes:
 | `EventLabel` | Short Spanish event name anchored to a map/building/timeline point. |
 | `AnthemPhrase` | Monumental lyric layout with phrase continuation state (`open`, `suspended`, `resolved`). |
 | `Timeline` | Horizontal/vertical progress, year ticks, interruptions, buried memory thread. |
+| `ConflictLine` | Typed 1930–1983 actor route with institutional origin, dash pattern, arrow grammar, legal-position metadata, and time range. |
+| `InstitutionalControlGrid` | Military/state-control layer that can close civic nodes, intercept routes, and retain the light atlas aesthetic. |
+| `CensorshipMask` | Deterministic shutters for newspaper/radio/label interruption without graphic imagery. |
+| `MissingNodeField` | Authored disappearances/absences represented by removed nodes and persistent empty coordinate rings. |
+| `CivicReconnection` | Brief 1983 state change reopening Congress, ballot, and public-route nodes and handing the line to 1986. |
 | `MapNetwork` | Nodes/edges for provinces, rail, civic links, and contemporary national network. |
 | `ArchitecturalDrawing` | Ordered SVG reveal of Cabildo, Casa de Tucumán, Congreso, station, city façade. |
 | `Silhouette` | Pose, scale tier, orientation, stroke/fill treatment, optional skeletal anchors for morphs. |
@@ -845,17 +889,21 @@ During civil conflict, arrows overwrite one another and provincial units drift a
 
 A ship route enters the port and its dashed wake regularizes into railway sleepers. The camera travels the same line inland. As the rail passes a switch, the sleepers rotate 90° and tighten into factory windows; the station clock becomes an industrial gauge; steam becomes broadcast rings. Migrant crowd marks remain and multiply into urban/mass-political crowds, preserving people—not machinery—as the human continuity.
 
+### 1930–1976 → dictatorship — escalation becomes control of the system
+
+The civic baseline is repeatedly cut but repeatedly resumes: 1930, Peronist mass politics, 1955, proscription, alternating civilian/military segments, and the late-1960s/1970s escalation remain chronologically legible. In the final beat, peaceful civic lines, the separately labeled armed paths of Montoneros and ERP, other political/para-state violence, and military/security repression occupy distinct visual systems. At maximum visual instability, no actor lines merge into a false equivalence. The civilian/government baseline stops and a military/state layer takes control of the institutional anchor points. A small `1976` appears at the edge while orthogonal control geometry replaces civic flow. The transition communicates who controls the state apparatus, not a heroic coup milestone or a justification for it.
+
 ### 1976 → 1978 — wounded grid becomes bounded pitch
 
-The dictatorship scene never clears. One surviving rectangular fragment expands into pitch markings, but missing nodes remain outside the touchlines and the palette only saturates inside the stadium. The audience may experience the sport's genuine public emotion while the overhead pullback reveals its historical enclosure. This avoids both erasing the victory and isolating it from state-terror context.
+The dictatorship scene never clears. One surviving rectangular fragment of the controlled institutional grid expands into pitch markings, but censorship bars, state/security boundaries, and missing nodes remain outside the touchlines; the palette only saturates inside the stadium. The audience may experience the sport's genuine public emotion while the overhead pullback reveals its historical enclosure. This avoids both erasing the victory and isolating it from state-terror context.
 
 ### 1978 → Malvinas — stadium ellipse becomes South Atlantic weather
 
 The stadium bowl elongates into an isobar; crowd strokes align into wind; the trophy axis turns into a longitude. The camera pulls out far enough to recover mainland geography, then follows that longitude southeast. Stadium sound loses high frequencies until it becomes wind. Gold is left behind at the stadium rather than carried to the islands.
 
-### Malvinas → 1986 — interrupted route becomes possibility
+### Malvinas → 1983 → 1986 — interrupted route becomes civic reconnection, then possibility
 
-The 1982 naval/air route stops in open ocean. Its end curls into a neutral circle, not a victory symbol. A second circle and two perpendicular ocean parallels gradually establish the center circle and halfway line of a pitch. Cold wind becomes stadium air, while color warms slowly. The same interrupted path is re-energized as an athletic trajectory without implying that football redeems or resolves the war.
+The 1982 naval/air route stops in open ocean and holds. The wider national timeline then advances to `1983`; the camera pulls back just enough to recover the mainland edge. A civic line reconnects, the institutional control masks release, and Congress, ballot, and public-route nodes reopen beneath `1983 · DEMOCRACIA`. That reopened line—not the war route itself—curls into the center circle of a pitch as ocean parallels and the civic grid establish the 1986 geometry. Cold wind becomes stadium air while color warms slowly. The transition does not suggest that football redeems the war or that one leader owns democratic restoration.
 
 ### 1986 → 2014 — triumph becomes a buried memory thread
 
@@ -947,10 +995,10 @@ No track is selected or generated at this phase. This is an energy and orchestra
 | `00:28–00:33` | Civil wars | TENSE | 6→5 | Polyrhythmic conflict and split motifs; avoid melodramatic battle scoring. |
 | `00:33–00:38` | Organization | HOPEFUL | 5→6 | Divergent motifs converge into a shared pulse. |
 | `00:38–00:45` | Immigration / growth | BUILDING, HOPEFUL | 5→7 | Expanding orchestration, rail rhythm, melodic openness. |
-| `00:45–00:52` | 1930–1976 | DRIVING, TENSE | 7→8→5 | Dense civic/industrial pulse, abrupt institutional dropouts. |
-| `00:52–00:57` | Dictatorship | RESTRAINED, SOLEMN | 2 | Remove percussion and most bass; exposed sustained texture and silence pockets. |
+| `00:45–00:52` | 1930–1976 escalation | DRIVING, FRACTURED, TENSE | 6→8→3 | Industrial/crowd pulse broadens in the Peronist beat; post-1955 interruptions multiply; distinct competing rhythms enter for armed, para-state, civic, and military/security systems. The takeover removes layers instead of producing a climax. |
+| `00:52–00:57` | Dictatorship / state repression | RESTRAINED, SOLEMN | 2 | Controlled low pulse, censored dropouts, exposed sustained texture, and silence pockets as civic nodes disappear. |
 | `00:57–01:01` | 1978 | TRIUMPHANT / UNEASY | 6 | Bright surface figure over unresolved low pedal; quickly contained. |
-| `01:01–01:07` | Malvinas | SOLEMN | 3→4 | Wide intervals, breath, minimal pulse; wind carries the space. |
+| `01:01–01:07` | Malvinas → 1983 democracy | SOLEMN → CAUTIOUSLY HOPEFUL | 3→4→5 | Wide intervals, breath, and wind through the Malvinas hold; a restrained harmonic reopening accompanies the final 1.3-second civic reconnection. |
 | `01:07–01:13` | 1986 | TRIUMPHANT | 8, unresolved end | Full rhythmic return and gold timbre; cadence deliberately suspends. |
 | `01:13–01:18` | 1990–2001 | TENSE, ACCELERATING | 6→8→3 | Mechanical tempo/density increase, dry fracture, sudden restraint. |
 | `01:18–01:23` | New century | HOPEFUL | 3→6 | Pulse rebuilds; earlier melodic cell returns in a new register. |
@@ -985,10 +1033,16 @@ These are production gates, not silent changes to the agreed narrative.
 - **Territorial consolidation:** Verify frontier and indigenous-territory representation for 1853–1880. A stabilizing national state must not be visualized as uncontested occupation of the entire present-day territory.
 - **Immigration:** Verify origin regions, route proportions, principal ports, and timing. Avoid implying that all immigration came from one country or entered only through Buenos Aires.
 - **Railways/agriculture:** Verify network snapshots and avoid using a late-20th-century rail layout for 1880–1930. Check wheat/cattle regions and city skylines by approximate date.
-- **1930–1976:** Validate coup-interruption dates and the balance of industrialization, mass politics, Peronism, proscription, and institutional breaks. If Perón/Eva silhouettes are retained, verify pose/context and keep duration non-partisan.
-- **1976–1983:** Confirm terminology (`DICTADURA · TERRORISMO DE ESTADO`) and the respectful use of disappearing nodes. Review any white-headscarf/Plaza de Mayo symbol with sensitivity experts; do not conflate all victims or organizations into one visual mark.
+- **1930–1955:** Validate the 1930 and 1943 coup chronology, industrialization/urban-growth timing, the emergence and electoral rise of Peronism, the `1946` marker, and the visual balance among Perón, workers, crowds, institutions, and opposition. Perón's silhouette must remain contextual rather than heroic or caricatured. Eva's 8–10-frame appearance must be historically situated, subordinate to the broader mass-political vocabulary, and free of gold.
+- **1955–1969:** Verify the 1955 coup, Peronist proscription, elections, civilian/military alternation, and subsequent institutional interruptions before locking the exact timeline cuts. Do not imply that every government or interruption had the same origin, duration, or political meaning.
+- **Late 1960s–1976 escalation:** Establish a historian-reviewed event/actor matrix before animation. Verify the formation, active periods, ideological character, armed actions, and changing roles of **Montoneros** and the **ERP**. They must be identified factually as armed political/revolutionary organizations, not shown as generic peaceful protesters, defenseless students, or demonized caricatures.
+- **Multiple-actor violence:** Separately verify civic protest, party/union conflict, armed-organizational violence, violence by other political actors, para-state violence—including whether and when a Triple A reference is warranted—and military/security repression. If Operativo Independencia or another specific operation is implied, verify date, command structure, geography, and legal/illegal state action. Do not present contested causal interpretations as settled fact.
+- **Non-equivalence rule:** Review the finished sequence to ensure that line systems do not imply legal, institutional, moral, or quantitative equivalence. State/security violence must remain visually tied to institutional power and, after the takeover, to control of the state apparatus. Context must not become justification for the coup or state terrorism.
+- **1976 takeover:** Confirm that the military takeover emerges through the stopping of the civilian/government baseline and occupation of institutional nodes. `1976` remains small; do not create a heroic `24 MAR 1976` title card, gold treatment, or triumphant musical impact.
+- **1976–1983:** Confirm the concise on-screen terminology `1976–1983 · DICTADURA`; retain the historically accurate concept of state terrorism in the action notes. Review censorship, surveillance, illegal/state violence, disappearances, and institutional repression as distinct visual actions. Missing nodes must remain respectful, non-graphic, and representative of damage to people and the national social fabric without appropriating one human-rights organization's emblem.
 - **1978:** Verify tournament/trophy/stadium details. Preserve the surrounding dictatorship layer; also review whether the chosen anthem phrase creates an unintended celebratory political association and confirm the intended ethical framing.
 - **Malvinas 1982:** Verify island coastlines, bearings, naval/air-route abstraction, weather, dates, and uniform silhouettes. Avoid depicting combat outcomes or exact operations unless fact-checked. Keep the tone non-triumphal.
+- **1983 democratic restoration:** Verify the restoration date and institutional symbols. `1983 · DEMOCRACIA` should depict reopening Congress, ballot, and civic connections without assigning restoration to a single leader or implying that football caused the transition.
 - **1986 trajectory:** Ensure the football line is an original abstraction rather than a frame-accurate reproduction of protected footage. Confirm tournament naming and final-result context if any score is later added.
 - **1990s / 2001:** If economic symbols become more specific, verify convertibility, recession, banking restrictions, protests, and date sequence. Current abstract systems intentionally avoid collapsing the crisis into one false cause.
 - **2001–2014:** Verify any science, industry, civic, or digital symbols introduced. Keep governments and party identities out unless the narrative scope is later explicitly expanded.
@@ -1015,7 +1069,9 @@ These are production gates, not silent changes to the agreed narrative.
 
 ### Ethical and readability review gates
 
-- Run a dedicated sensitivity review for state terrorism and Malvinas before animation lock.
+- Run a dedicated historian/sensitivity review for the 1930–1983 escalation, armed organizations, para-state violence, state/security repression, state terrorism, democratic restoration, and Malvinas before animation lock.
+- Check that `MONTONEROS` and `ERP` are readable as brief factual identifications of armed organizations, while civic protest and unarmed crowds remain visually separate.
+- Check that the dictatorship's institutional control and state terrorism are neither visually excused by prior violence nor flattened into a claim of equivalence among actors.
 - Test the 1978 transition with viewers to ensure contextual complexity is legible without negating the sporting event or sanitizing the dictatorship.
 - Test the gold hierarchy in grayscale and color-blind simulations; meaning should not depend on hue alone.
 - Test all small legal/cartographic labels at actual delivery sizes and compression.
@@ -1028,7 +1084,8 @@ These are production gates, not silent changes to the agreed narrative.
 1. Approve the **1:45 / 19-scene timing architecture**.
 2. Approve **Alternative 1: golden memory line + incomplete laurel** as the 1986→2022 master motif.
 3. Decide the Andes chronology treatment: show preparation through 1816 and cross in a visible 1817 beat, or retitle that scene `1810–1817`.
-4. Approve the restrained, context-preserving handling of 1978 inside the 1976–1983 visual layer.
-5. Approve the final map's explicit disputed/claim legend treatment before any map paths are produced.
-6. After those approvals, the next phase should be an animatic specification (frame ranges, camera keyframes, and path registry), still before polished illustration or final music.
-
+4. Approve the revised **1930–1983 era-of-violence grammar**: chronological escalation, separately typed actor lines, no false equivalence, and a non-heroic 1976 takeover represented as institutional control.
+5. Approve the restrained, context-preserving handling of 1978 inside the 1976–1983 visual layer.
+6. Approve the 1.3-second `1983 · DEMOCRACIA` civic-reconnection beat inside Scene 12's transition to 1986.
+7. Approve the final map's explicit disputed/claim legend treatment before any map paths are produced.
+8. After those approvals, the next phase should be an animatic specification (frame ranges, camera keyframes, and path registry), still before polished illustration or final music.
