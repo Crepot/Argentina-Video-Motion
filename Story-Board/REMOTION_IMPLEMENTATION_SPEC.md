@@ -282,6 +282,22 @@ La represión, la censura, la vigilancia y las desapariciones se comunican sólo
 
 **Resolución:** mantener la prohibición de protagonismo sostenido, pero permitir una aparición breve y coreografiada de Videla dentro de Scene 10. No hay retrato, hero framing, gold ni fondo aislado. La figura entra con fuerzas/vehículos, realiza una acción limitada y sus anchors se transforman en barras de control/censura. Perón, Eva y demás figuras siguen la misma regla: acción contextual breve, nunca poster.
 
+### 2.9 Dirección editorial nacional/institucional — LOCK
+
+La implementación debe aplicar simultáneamente estos criterios:
+
+- Peronismo 1946–1955: industrialización e incorporación obrera conviven con personalismo, centralización y presión/conflicto sobre oposición, prensa, universidad e instituciones. Ninguna mitad puede omitirse.
+- Montoneros y ERP se rotulan `ORGANIZACIONES GUERRILLERAS REVOLUCIONARIAS`. Sus secuestros, asesinatos, atentados y ataques a instalaciones se expresan mediante acciones concretas no gráficas, no sólo mediante líneas abstractas.
+- Víctimas civiles, políticas, sindicales, policiales y militares de la violencia guerrillera pueden producir nodos ausentes antes de 1976. `MissingNodeField` no pertenece moral ni semánticamente a una sola categoría posterior de víctimas.
+- **Triple A** se nombra como sistema paraestatal separado, unido únicamente a nodos políticos/de seguridad históricamente verificados. No se fusiona con guerrilla, Fuerzas Armadas regulares ni protesta cívica.
+- Monte Chingolo usa el hecho documentado del `23 DIC 1975`: ataque del PRT-ERP al Batallón Depósito de Arsenales 601 “Domingo Viejobueno”. No se sustituye por una catedral ni por un edificio civil inventado.
+- La explosión de Monte Chingolo es una fractura arquitectónica SVG sin gore. Su humo se transforma en halftone de una portada creada para el film, marcada `RECREACIÓN GRÁFICA`; headline bloqueado: `TERRORISMO: EL ERP ATACA UN ARSENAL MILITAR`. No imitar masthead ni atribuir la tapa a un diario real.
+- Fuentes de verificación para ese beat: [Secretaría de Derechos Humanos de la Nación](https://www.argentina.gob.ar/node/292787) y [Museo Histórico de Monte Chingolo / Universidad Nacional de Lanús](https://vientosur.unla.edu.ar/index.php/ataque-al-viejobueno/). Las fuentes confirman objetivo, lugar, organización y fecha; el headline es una decisión editorial contemporánea del film, no una cita de archivo.
+- La dictadura conserva control institucional, censura, desapariciones y represión ilegal como hechos explícitos. La precisión visual no puede quedar reservada a esas acciones: la violencia anterior también debe tener agentes, blancos y consecuencias legibles.
+- 1978 es una celebración deportiva nacional genuina. Las marcas de dictadura establecen entrada y salida, pero retroceden durante gol, crowd y trophy; la alegría popular no se presenta como propiedad o propaganda automática del régimen.
+- Malvinas usa `RECLAMO ARGENTINO DE SOBERANÍA`, con nota secundaria opcional `BAJO ADMINISTRACIÓN BRITÁNICA`. Soldados argentinos reciben escala humana, ayuda mutua, deber y sacrificio sin gore ni resultados de combate inventados.
+- Consolidación territorial 1853–1880 muestra expansión de autoridad nacional, asentamientos, comunicaciones, puestos de frontera e integración, reconoce conflictos y presencia indígena, y evita tanto el relleno instantáneo del mapa moderno como una tesis visual única de “ocupación”.
+
 ---
 
 ## 2A. Corrección global: de atlas recorrido a atlas vivo
@@ -488,9 +504,9 @@ Los frames y tiempos son los del animatic y no se alteran.
 
 ### Scene 07 — 1853–1880 · frames 1044–1199
 
-- **Protagonista visual:** red institucional ensamblada por conexiones activas.
-- **Acción principal:** delegates/couriers llegan; nodes se conectan; piezas territoriales responden gradualmente; una línea constitucional circula por la red.
-- **Elementos humanos:** figuras cívicas mínimas que entregan/reciben documentos y se redistribuyen; no crowd hero.
+- **Protagonista visual:** red institucional y territorial ensamblada por conexiones activas.
+- **Acción principal:** delegates/couriers llegan; nodes se conectan; una línea constitucional circula; caminos, comunicaciones, settlements y outposts de frontera extienden autoridad efectiva sin rellenar instantáneamente el mapa moderno. Zonas de conflicto y nodos indígenas permanecen identificables mientras la cámara prioriza integración territorial y construcción estatal.
+- **Elementos humanos:** figuras cívicas mínimas, couriers, pobladores/outpost figures y presencia indígena contextual sin estereotipo ni desaparición visual; no crowd hero.
 - **Foreground:** documento/compass rule que pasa cerca.
 - **Midground:** nodes que se activan al recibir figuras/rutas.
 - **Background:** contornos todavía cambiantes.
@@ -518,13 +534,13 @@ Los frames y tiempos son los del animatic y no se alteran.
 
 ### Scene 09 — 1930–1976 · frames 1362–1721
 
-- **Protagonista visual:** civic timeline que se llena de personas, se interrumpe y finalmente queda sobrepasada por violencia/militarización.
-- **Acción principal:** trabajadores/multitudes avanzan; Perón habla/gesticula brevemente; Eva atraviesa como bridge corto; crowd se fragmenta; grupos armados surgen de esa fragmentación; armas aparecen dentro de acción; smoke/explosion graphic altera trayectorias; fuerzas de seguridad responden y el espacio se militariza.
-- **Elementos humanos:** workers, crowd, Perón rig breve, Eva rig de 8–10 frames, peaceful civic groups, Montoneros/ERP como grupos armados diferenciados, security formations; sin demonización ni glamour.
-- **Foreground:** figuras que se separan del crowd, armed actor breve, smoke shape y security figure en oposición espacial.
-- **Midground:** Plaza/city flows, confrontación abstracta, vehículos/columnas de seguridad.
-- **Background:** fábricas, Congreso, Casa Rosada, radios/newspapers y timeline interrumpida.
-- **Cámara:** fast lateral tracking; breves follows de crowd y armed subgroup; spatial rack hacia respuesta de seguridad; pierde horizonte y vuelve a rigidez en 1722.
+- **Protagonista visual:** civic timeline que incorpora trabajadores y multitudes, se concentra alrededor de liderazgo personalista, sufre rupturas y queda finalmente sobrepasada por guerrilla, violencia paraestatal, crisis política y militarización.
+- **Acción principal:** trabajadores/multitudes avanzan; Perón habla/gesticula brevemente mientras nodos de oposición, prensa, universidad e instituciones se comprimen hacia el eje político; Eva atraviesa como bridge corto; proscripción y resistencia quiebran la línea; Montoneros/ERP ejecutan acciones armadas concretas; nodos civiles/políticos/sindicales/policiales/militares afectados dejan rings; Triple A entra por una ruta paraestatal separada; Monte Chingolo produce explosión arquitectónica → humo/halftone → portada reconstruida; seguridad/represión y crisis institucional empujan hacia 1976.
+- **Elementos humanos:** workers, crowd, oposición cívica, Perón rig breve, Eva rig de 8–10 frames, Montoneros/ERP como grupos guerrilleros diferenciados, víctimas por clase de nodo, Triple A vinculada a nodos verificados y security formations; sin gore ni glamour.
+- **Foreground:** armed actor breve, target node, fractura de fachada del arsenal, humo plano, pliegue/halftone de diario y security figure en oposición espacial.
+- **Midground:** Plaza/city flows, oposición/instituciones comprimidas, confrontación, vehículos/columnas de seguridad y ruta Triple A separada.
+- **Background:** fábricas, Congreso, Casa Rosada, prensa/radio, universidad, Batallón de Arsenales 601 y timeline interrumpida.
+- **Cámara:** fast lateral tracking; breves follows de crowd y guerrilla; push a Monte Chingolo; blast-match a portada `RECREACIÓN GRÁFICA`; spatial rack hacia Triple A/security; pierde horizonte y vuelve a rigidez en 1722.
 - **Densidad:** D2→D5 breve→D3 al takeover.
 - **Elemento heredado:** railway/factory rhythm.
 - **Transformación de entrada:** ventanas se vuelven industria/city; rail rhythm se vuelve civic pulse.
@@ -533,8 +549,8 @@ Los frames y tiempos son los del animatic y no se alteran.
 
 ### Scene 10 — 1976–1983 context · frames 1722–1907
 
-- **Protagonista visual:** maquinaria institucional militar que ocupa el atlas y daña la red cívica.
-- **Acción principal:** fuerzas/vehículos ocupan calles; instituciones se rigidizan; Videla emerge brevemente dentro de la formación, avanza/gesticula una vez y queda absorbido por barras/geometry; censura, vigilancia e intercepción reemplazan su figura; personas se retiran y nodes desaparecen.
+- **Protagonista visual:** orden militar impuesto que detiene trayectorias armadas y ocupa el atlas, seguido por clausura institucional, censura y represión ilegal.
+- **Acción principal:** fuerzas/vehículos ocupan calles y detienen competing armed routes; instituciones se rigidizan; Videla emerge brevemente dentro de la formación, avanza/gesticula una vez y queda absorbido por barras/geometry; censura, vigilancia, intercepción y represión ilegal reemplazan su figura; personas se retiran y nodes desaparecen. Los rings continúan una gramática de víctimas ya iniciada antes de 1976.
 - **Elementos humanos:** military column, 1–2 vehicles, Videla rig reconocible por uniforme/postura sin detalle facial, civiles que se retiran; no pañuelos blancos ni emblema de organización.
 - **Foreground:** vehicle edge, boots/figures crossing, censorship shutter.
 - **Midground:** Videla integrado a control grid y luego ocultado por machinery institucional.
@@ -543,33 +559,33 @@ Los frames y tiempos son los del animatic y no se alteran.
 - **Densidad:** D3 heredada→D4→D2.
 - **Elemento heredado:** baseline cívica y security geometry de Scene 09.
 - **Transformación de entrada:** vehículos/figuras alinean la geometría; baseline queda controlada.
-- **Elemento superviviente:** rectángulo institucional + tramo herido de memory line.
+- **Elemento superviviente:** rectángulo institucional + tramo controlado/discontinuo de memory line.
 - **Transformación de salida:** vehicle tracks/rectángulo se regularizan como primeras líneas de cancha; figuras se convierten en crowd marks sólo mediante transformación espacial, no equivalencia semántica.
 
 ### Scene 11 — 1978 · frames 1908–2084
 
-- **Protagonista visual:** cancha que nace de la grilla y partido que cobra vida dentro del contexto herido.
+- **Protagonista visual:** cancha que nace de la grilla y se convierte en una celebración deportiva nacional con agencia propia.
 - **Acción principal:** líneas crecen; jugadores entran; equipos toman posiciones; pelota circula; cámara acompaña ataque; gol; crowd responde; jugadores celebran; trophy se eleva como consecuencia.
 - **Elementos humanos:** 8–12 sports actors en tracks simplificados, goalkeeper, scoring player/team group y crowd flow de estadio.
 - **Foreground:** jugador/ball crossing y goal net line.
 - **Midground:** acción colectiva y celebración.
-- **Background:** tribunas que se construyen; fuera de ellas sobreviven censura/missing nodes/control grid.
-- **Cámara:** descend al pitch, follow de pelota/jugador, rise con celebración y pullback-reveal del contexto.
+- **Background:** tribunas que se construyen; marcas de control sobreviven en la entrada, retroceden durante la acción/celebración y reaparecen sólo en el pullback de salida.
+- **Cámara:** descend al pitch, follow de pelota/jugador, follow humano de celebración, rise con trophy y pullback de salida hacia el atlas.
 - **Densidad:** D1→D5 breve→D3.
-- **Elemento heredado:** rectángulo controlado + memory line herida.
+- **Elemento heredado:** rectángulo controlado + memory line discontinua; ambos pierden primacía al comenzar el juego.
 - **Transformación de entrada:** barras se estiran como touchlines; tracks de vehículos se vuelven pitch guides.
 - **Elemento superviviente:** stadium ellipse y crowd tangents.
 - **Transformación de salida:** ellipse se alarga; crowd tangents se vuelven wind lines; trophy axis se vuelve longitude; gold queda atrás.
 
 ### Scene 12 — 1982→1983 · frames 2085–2258
 
-- **Protagonista visual:** ruta del Atlántico que aumenta de escala hasta convertirse en paisaje humano frío.
-- **Acción principal:** cámara sigue ruta; islas crecen; contours se vuelven terreno; soldados argentinos avanzan contra viento; un grupo iza/sostiene bandera en gesto breve, sobrio y no triunfal —la localización/fecha exacta debe verificarse antes de producción—; luego cartografía/civic timeline se reabre hacia 1983.
+- **Protagonista visual:** ruta soberana argentina del Atlántico que aumenta de escala hasta convertirse en paisaje humano de deber, combate y sacrificio.
+- **Acción principal:** cámara sigue la ruta bajo `RECLAMO ARGENTINO DE SOBERANÍA`; islas crecen; contours se vuelven terreno; soldados argentinos avanzan contra viento, se ayudan, aseguran una posición y sostienen la bandera en un gesto digno —localización/fecha exacta a verificar—; luego cartografía/civic timeline se reabre hacia 1983 sin borrar su memoria.
 - **Elementos humanos:** 5–8 soldiers con walk cycles pesados, flag team y pequeñas silhouettes en profundidad; sin combate gráfico.
 - **Foreground:** grass/rock hatching, coat/flag edge sacudido por viento.
 - **Midground:** soldados desplazándose y flag action.
 - **Background:** islas, mar, wind layers y distancia continental.
-- **Cámara:** linear travel oceánico → descend-scale cartografía/territorio → lateral follow de soldados → pullback a timeline nacional para 1983.
+- **Cámara:** linear travel oceánico → descend-scale cartografía/territorio → lateral follow a escala humana de soldados → pullback a timeline nacional para 1983.
 - **Densidad:** D1→D4→D2.
 - **Elemento heredado:** stadium ellipse/isobar.
 - **Transformación de entrada:** crowd strokes se convierten en viento; ellipse en isobar; pitch coordinates en ocean grid.
@@ -1250,10 +1266,10 @@ No crear un color rojo partidario, negro absoluto ni un gold alternativo para el
 | D | 1812–1841 | 90–119 | 60.400–61.400 | 30 | Represión y ausencia bajo control institucional. |
 | E | 1842–1871 | 120–149 | 61.400–62.400 | 30 | Vacío, vigilancia y daño social sostenido. |
 | F | 1872–1907 | 150–185 | 62.400–63.600 | 36 | Rectángulo superviviente se regulariza hacia cancha. |
-| G | 1908–1937 | 186–215 | 63.600–64.600 | 30 | Nace cancha/estadio dentro del atlas herido. |
+| G | 1908–1937 | 186–215 | 63.600–64.600 | 30 | Nace cancha/estadio; el contexto de control comienza a retroceder. |
 | H | 1938–1973 | 216–251 | 64.600–65.800 | 36 | Entra `1978`; crece celebración pública. |
-| I | 1974–2015 | 252–293 | 65.800–67.200 | 42 | Acción deportiva y gol; contexto exterior permanece. |
-| J | 2016–2046 | 294–324 | 67.200–68.233 | 31 | Trofeo, anthem y gold contenido. |
+| I | 1974–2015 | 252–293 | 65.800–67.200 | 42 | Acción deportiva y gol; celebración nacional ocupa el frame. |
+| J | 2016–2046 | 294–324 | 67.200–68.233 | 31 | Trofeo, anthem y gold nacional. |
 | K | 2047–2084 | 325–362 | 68.233–69.500 | 38 | Pullback; estadio → elipse/isobar. |
 | L | 2085–2114 | 363–392 | 69.500–70.500 | 30 | Anchor Atlántico Sur; gold desaparece. |
 | M | 2115–2144 | 393–422 | 70.500–71.500 | 30 | Viaje cartográfico sobre el océano. |
@@ -1360,16 +1376,16 @@ Anchor `(3500,1970)`, alineación izquierda, ancho máximo 460 px. `1976` margin
 **Profundidad:** seed por encima de grid, debajo de memory line.  
 **Salida:** frame 1907 y 1908 deben diferir sólo por el último 8% de cierre y el inicio del estadio; nada desaparece.
 
-### 8.10 Bloque G — 1908–1937 / nace el estadio dentro del atlas herido
+### 8.10 Bloque G — 1908–1937 / nace el estadio desde la grilla controlada
 
-**Tiempo musical:** anchor obligatorio 1908. La energía deportiva emerge sin borrar el pedal sombrío.  
+**Tiempo musical:** anchor obligatorio 1908. La energía deportiva emerge y desplaza gradualmente el pedal sombrío.  
 **Cámara:** desde `(3725,2190,0.96,0°)` hacia `stadiumWest`; leve push, sin corte.  
-**Objetos visibles:** `FootballPitch` completa touchlines, center line y círculo; latitude curves se arquean como bowl de estadio; 6–8 player rigs se construyen desde route nodes y entran caminando/trotando a posiciones; crowd strokes todavía al `0.10–0.22`. El exterior conserva missing rings y censorship bars.  
+**Objetos visibles:** `FootballPitch` completa touchlines, center line y círculo; latitude curves se arquean como bowl de estadio; 6–8 player rigs se construyen desde route nodes y entran caminando/trotando a posiciones; crowd strokes todavía al `0.10–0.22`. Missing rings y censorship bars sobreviven sólo en el borde durante la entrada y caen por debajo de `0.10` al terminar el bloque.  
 **Texto:** `1978` comienza a entrar en 1928, opacity `0→0.35`; no hay anthem todavía.  
 **Memory line:** morph hacia open stadium ellipse `0→0.45`; recorre la entrada oeste y parte del perímetro.  
 **Acción humana:** jugadores cruzan líneas todavía en crecimiento; dos intercambian posición mientras goalkeeper ocupa el arco. La cancha se termina alrededor de cuerpos ya activos.  
 **Transformación:** grid rectangular y estadio comparten exactamente los mismos cuatro corner anchors. Los route nodes se convierten en player start positions.  
-**Color/opacidad:** interior `skyBluePale 0.36→0.52`; pitch `deepBlueSoft 0.55`; exterior `grayBlue 0.28`; gold `0`.  
+**Color/opacidad:** interior `skyBluePale 0.36→0.58`; pitch `deepBlueSoft 0.55`; exterior `grayBlue 0.28→0.08`; gold `0`.  
 **Parallax:** pitch y grid factor 1; crowd factor 1.02; exterior no se aplana.  
 **Salida:** en 1937 el estadio es inequívoco, pero la fecha aún no domina.
 
@@ -1377,7 +1393,7 @@ Anchor `(3500,1970)`, alineación izquierda, ancho máximo 460 px. `1976` margin
 
 **Tiempo musical:** crecimiento rítmico; sin falso cambio de régimen.  
 **Cámara:** push/track hacia stadium center; zoom `1.04→1.14`, rotación `0→-2°`.  
-**Objetos visibles:** stadium bowl se completa; crowd pattern sube a `0.42`; 8–12 players toman formation; la pelota circula en dos pases previos; flags/crowd strokes sólo dentro del estadio. El atlas herido sigue legible alrededor.  
+**Objetos visibles:** stadium bowl se completa; crowd pattern sube a `0.48`; 8–12 players toman formation; la pelota circula en dos pases previos; flags/crowd strokes expanden el lenguaje nacional desde el estadio hacia el atlas cercano. Las marcas políticas dejan de ser legibles durante el centro del bloque.  
 **Texto:**
 
 - `1978`: opacity `0.35→1` entre 1938–1950;
@@ -1387,11 +1403,11 @@ Anchor `(3500,1970)`, alineación izquierda, ancho máximo 460 px. `1976` margin
 **Memory line:** alcanza open stadium ellipse completa en 1956 y se mantiene sky blue; no recibe gold.  
 **Acción humana:** jugadores realizan jog, giro y recepción con pose tracks compartidos; la pelota nunca se mueve sola sin respuesta corporal.  
 **Transformación:** una `RouteLine` independiente nace de los dos pases y prepara la trayectoria de ataque sobre la grilla.  
-**Color:** saturación aumenta sólo dentro de pitch/stadium; exterior no cambia. Gold `0`.  
+**Color:** saturación aumenta en pitch, stadium y atlas nacional cercano; exterior político cae a background residual. Gold `0`.  
 **Profundidad:** crowd 45, ball route 48, memory line 40, texto 70.  
 **Salida:** ball marker listo en punto inicial; celebración todavía no llegó al máximo.
 
-### 8.12 Bloque I — 1974–2015 / acción deportiva contenida
+### 8.12 Bloque I — 1974–2015 / acción deportiva nacional
 
 **Tiempo musical:** pulso deportivo activo; el movimiento concluye exactamente en el acento 2016.  
 **Cámara:** arco editorial poco profundo hacia `(4090,2140)`; rotación llega gradualmente a `-3°`.  
@@ -1407,8 +1423,8 @@ Primera línea entra 1988–1998; segunda 1998–2010. Ambas deep blue, nunca go
 **Memory line:** estable como boundary; pequeños pulsos de opacity `±0.06`, sin deformación elástica.  
 **Acción humana:** el tracking de cámara acompaña atacante/pelota; el jugador transfiere peso, goalkeeper se desplaza y el equipo comienza a converger sólo después de la definición.  
 **Transformación:** `FootballTrajectory` llega al goal anchor en 2015; el impacto visual se reserva para 2016.  
-**Color/opacidad:** pitch/crowd sky blue hasta `0.70`; exterior herido `0.18–0.28`; gold todavía `0`.  
-**Profundidad:** el estadio no tapa missing nodes exteriores.  
+**Color/opacidad:** pitch/crowd sky blue hasta `0.78`; atlas nacional cercano `0.38–0.52`; las marcas de censura/missing nodes no permanecen legibles durante la jugada. Gold todavía `0`.  
+**Profundidad:** jugadores, pelota y crowd dominan sin que la grilla política compita semánticamente con el gol.  
 **Salida:** frame 2015 contiene contacto inminente; no anticipar trophy gold.
 
 ### 8.13 Bloque J — 2016–2046 / trofeo y gold restringido
@@ -1417,11 +1433,11 @@ Primera línea entra 1988–1998; segunda 1998–2010. Ambas deep blue, nunca go
 **Cámara:** pequeña elevación ceremonial; zoom `1.08→0.96` hacia el inicio del pullback.  
 **Objetos visibles:** goal-impact ring una sola vez; jugadores completan carrera y se agrupan; uno o varios levantan el trophy simplificado, que se dibuja desde eje vertical; crowd llega a máximo `0.56`, sin partículas.  
 **Texto:** anthem plenamente legible; event label estable hasta 2038 y empieza a salir después.  
-**Memory line:** continúa sky blue. El gold no recorre toda la boundary. Sólo trophy y goal ring usan `goldMuted/goldLight`.  
+**Memory line:** continúa sky blue. El gold no recorre toda la boundary. Trophy, goal ring y un único crowd pulse usan `goldMuted/goldLight`.  
 **Acción humana:** celebración breve de equipo con convergencia/levantamiento, sin loop jubiloso infinito; el trophy alcanza altura máxima después de que manos/cuerpos lo impulsen.  
 **Transformación:** trophy stroke draw 2016–2032; fill/hatch gold máximo `0.82`; ring se desvanece antes de 2034.  
-**Color:** interior saturado, exterior desaturado; gold cubre menos de 5% del frame.  
-**Profundidad:** trophy layer 52; crowd detrás; contexto exterior aún visible en al menos tres lados del estadio.  
+**Color:** estadio y atlas nacional saturados; gold cubre menos de 8% del frame y se mantiene matte.  
+**Profundidad:** trophy layer 52; crowd detrás; no se exige que la dictadura permanezca visible durante el levantamiento.  
 **Salida:** en 2046 trophy empieza a perder énfasis y la cámara ya revela la elipse completa.
 
 ### 8.14 Bloque K — 2047–2084 / estadio hacia elipse e isobar
@@ -1475,7 +1491,7 @@ Primera línea entra 1988–1998; segunda 1998–2010. Ambas deep blue, nunca go
 
 - `1982`: entra 2145–2155, stabilized, opacity `0→0.90`;
 - `GUERRA DE MALVINAS`: entra 2154–2168, opacity `0→0.82`;
-- `ISLAS MALVINAS · SOBERANÍA DISPUTADA` queda para el tramo posterior a 2171, cuando la geografía sea legible.
+- `ISLAS MALVINAS · RECLAMO ARGENTINO DE SOBERANÍA` queda para el tramo posterior a 2171, cuando la geografía sea legible; nota secundaria opcional: `BAJO ADMINISTRACIÓN BRITÁNICA`.
 
 **Memory line:** route head avanza hasta aproximadamente 48%; no se detiene todavía. La interrupción en océano pertenece al desarrollo posterior de Scene 12.  
 **Transformación:** ninguna forma deportiva sobrevive como objeto; su genealogía persiste sólo en la curva/isobar de la memory line.  
@@ -1649,7 +1665,7 @@ interface FootballPitchProps {
 ```
 
 **Responsabilidad:** pitch, center circle, stadium bowl y crowd pattern. Debe exponer geometry anchors usados por `CartographicGrid` y `MemoryLine`.  
-**No debe:** crear fondo independiente; vive dentro del atlas herido.
+**No debe:** crear fondo independiente; nace del atlas controlado, pero durante la acción deportiva puede desplazar visualmente sus marcas políticas hacia el borde.
 
 ### 9.11 `PaperTexture`
 
@@ -2108,10 +2124,11 @@ El benchmark puede aprobarse para expansión sólo si cumple todos los puntos ob
 - [ ] No hay violencia gráfica.
 - [ ] Fuerzas/vehículos ocupan el espacio en 1976; el takeover no se reduce a líneas abstractas inmóviles.
 - [ ] Videla aparece brevemente integrado a la estructura, ejecuta una acción limitada y se transforma/absorbe en la maquinaria institucional; no funciona como poster ni héroe.
-- [ ] 1978 se percibe como celebración pública genuina.
+- [ ] 1978 se percibe como celebración deportiva nacional genuina, no como propiedad ni propaganda automática del régimen.
 - [ ] Jugadores entran, se posicionan, actúan y celebran; cancha/tribunas se construyen progresivamente alrededor de ellos.
-- [ ] El exterior del estadio conserva grid controlado, censura/missing nodes o daño contextual visible.
-- [ ] La transición a Malvinas es solemne y no triunfalista.
+- [ ] Grid controlado y censura son legibles en la entrada/salida de 1978, pero no compiten con gol, crowd y trophy durante el centro de la celebración.
+- [ ] Malvinas muestra `RECLAMO ARGENTINO DE SOBERANÍA`; la nota `BAJO ADMINISTRACIÓN BRITÁNICA` es secundaria.
+- [ ] Soldados argentinos reciben escala humana, ayuda mutua, deber y sacrificio sin gore ni combate inventado.
 - [ ] Ningún líder político se convierte en protagonista sostenido del período o del film.
 
 ### 12.4 Memory line y morphing
@@ -2119,7 +2136,7 @@ El benchmark puede aprobarse para expansión sólo si cumple todos los puntos ob
 - [ ] Civic timeline → wounded line → stadium boundary → isobar/route se lee como un solo objeto lógico.
 - [ ] No hay self-intersections accidentales, pops o cambios de stroke width.
 - [ ] La stadium boundary no recibe gold completo.
-- [ ] Gold se limita a trophy/goal-impact en 1978 y ocupa `< 5%` del frame.
+- [ ] Gold se limita a trophy/goal-impact/un crowd pulse en 1978 y ocupa `< 8%` del frame.
 - [ ] La ruta oceánica en 2171 sigue activa; no se adelanta su interrupción posterior.
 
 ### 12.5 Cámara
@@ -2127,7 +2144,7 @@ El benchmark puede aprobarse para expansión sólo si cumple todos los puntos ob
 - [ ] Camera path coincide con la tabla §4.4.
 - [ ] No hay shake, overshoot ni zoom social-media.
 - [ ] Límites de velocidad §4.5 respetados.
-- [ ] El pullback de 1978 revela el contexto exterior con claridad.
+- [ ] El pullback de salida de 1978 reconecta estadio, atlas nacional y contexto histórico sin disminuir la celebración.
 - [ ] El viaje oceánico comunica distancia y dirección sureste.
 
 ### 12.6 Color y textura
@@ -2161,7 +2178,7 @@ El benchmark puede aprobarse para expansión sólo si cumple todos los puntos ob
 
 ### 12.9 Gate de expansión
 
-Sólo después de aprobar todos los ítems obligatorios se habilita extender el sistema al resto de los 3150 frames. Si el benchmark falla en continuidad de memory line, cámara o tratamiento del estadio dentro del atlas herido, no se debe compensar con transiciones one-off; debe corregirse el sistema compartido.
+Sólo después de aprobar todos los ítems obligatorios se habilita extender el sistema al resto de los 3150 frames. Si el benchmark falla en continuidad de memory line, cámara o apertura progresiva desde grilla controlada hacia celebración nacional, no se debe compensar con transiciones one-off; debe corregirse el sistema compartido.
 
 ---
 
@@ -2217,7 +2234,7 @@ Cada boundary del film debe registrarse con estos IDs antes de implementar escen
 | 06→07 | `conflictIntersections` | routes rivales curvan dirección | crossings se regularizan como nodes | `nationalOrganization.network` |
 | 07→08 | `network.atlanticEdge` | edge sale del continente | se arquea y multiplica en migration routes | `migration.atlanticRoutes` |
 | 08→09 | `rail.track + stationClock` | tren acelera hacia ciudad | sleepers→factory windows; clock→gauge | `industrialCivic.rhythm` |
-| 09→10 | `civicTimeline.intercepted` | security forces/vehicles ocupan anchors | baseline→controlled grid/wounded ranges | `memoryLine.woundedTimeline` |
+| 09→10 | `civicTimeline.intercepted + newspaper.rules` | Monte Chingolo blast→reconstructed press; Triple A/security/crisis saturate anchors | newspaper rules→controlled grid/discontinuous ranges | `memoryLine.woundedTimeline` |
 | 10→11 | `institutionalRectangle + vehicleTracks` | figuras se retiran al perímetro | rectangle/tracks→pitch guides | `pitch1978.seed` |
 | 11→12 | `stadiumEllipse + crowdTangents` | cámara se eleva y crowd se alinea | ellipse→isobar; crowd→wind; trophy axis→longitude | `southAtlantic.field` |
 | 12→13 | `interruptedRoute + civicLine` | 1983 reabre nodes | civic curve→center circle/dribble lane | `pitch1986.actionSpace` |
@@ -2251,6 +2268,11 @@ interface GlobalTransitionSpec {
 - [ ] Los 18 boundaries están presentes en `GlobalTransitionRegistry`.
 - [ ] Ningún boundary depende principalmente de fade.
 - [ ] Ningún tramo de más de 24 frames se sostiene sólo con pan sobre un dibujo inmóvil.
+- [ ] Scene 07 muestra integración territorial/autoridad efectiva, frontera activa y presencia indígena sin reducir todo el proceso a ocupación ni fingir control instantáneo del mapa moderno.
+- [ ] Scene 09 presenta incorporación obrera/industrial y personalismo peronista en el mismo sistema visual.
+- [ ] Montoneros/ERP aparecen como organizaciones guerrilleras revolucionarias con acciones y targets concretos; los nodos de víctimas anteriores a 1976 incluyen civiles, políticos, sindicalistas, policías y militares según hechos verificados.
+- [ ] Monte Chingolo identifica arsenal, lugar y fecha; la explosión es arquitectónica/no gráfica y la tapa siguiente dice `RECREACIÓN GRÁFICA` + `TERRORISMO: EL ERP ATACA UN ARSENAL MILITAR` sin masthead real.
+- [ ] Triple A está nombrada y visualmente separada de guerrilla, protesta cívica, Fuerzas Armadas regulares y represión ilegal.
 - [ ] San Martín/columna, crowds de 1810, migrantes, grupos políticos, fuerzas 1976, jugadores 1978, soldados de Malvinas, Maradona y Messi ejecutan acciones visibles.
 - [ ] 1986 contiene una secuencia corporal completa de avance/evasión/gol, no sólo path + número 10.
 - [ ] 2014, 2021 y 2022 distinguen oportunidad, equipo y resolución mediante coreografías diferentes.

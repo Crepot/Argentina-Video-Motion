@@ -68,28 +68,32 @@ The ending deliberately uses the near-silence after approximately
 
   09            00:45.4--00:57.4          1362--1721 1930--1976      Dense political/industrial
                                                                      period; coups, mass
-                                                                     politics, Perón/Eva
-                                                                     briefly, radicalization
-                                                                     and political violence.
-                                                                     Increasing interruptions
-                                                                     in the civic line.
+                                                                     politics, Perón/Eva,
+                                                                     personalist centralization,
+                                                                     guerrilla violence, Triple A,
+                                                                     Monte Chingolo and political
+                                                                     breakdown. Increasing
+                                                                     interruptions and victim nodes.
 
   10            00:57.4--01:03.6          1722--1907 1976--1983      Military takeover →
                                                      context         dictatorship → state
-                                                                     repression.
-                                                                     Atlas becomes wounded and
-                                                                     discontinuous; remain
+                                                                     control and illegal repression.
+                                                                     Imposed order becomes a
+                                                                     controlled/discontinuous atlas;
+                                                                     remain
                                                                      light/desaturated rather
                                                                      than black.
 
   11            01:03.6--01:09.5          1908--2084 1978            Stadium geometry grows
-                                                                     from the wounded grid.
-                                                                     Genuine sporting
-                                                                     celebration remains
-                                                                     visibly enclosed by
-                                                                     dictatorship-era context.
+                                                                     from the controlled grid.
+                                                                     Genuine national sporting
+                                                                     celebration takes the frame;
+                                                                     political context is concentrated
+                                                                     at entry and exit.
 
   12            01:09.5--01:15.3          2085--2258 1982 → 1983     South Atlantic / Malvinas,
+                                                                     Argentine sovereignty claim,
+                                                                     combatant duty/sacrifice,
                                                                      then a brief civic
                                                                      reconnection:
                                                                      `1983 · DEMOCRACIA`. No
@@ -234,7 +238,12 @@ network, railway and migration routes.
 
 Camera speed increases through a layered city panorama. Memory line =
 civic timeline repeatedly interrupted by institutional breaks and
-political violence.
+political violence. Peronist worker incorporation and personalist
+centralization share the frame. Montoneros/ERP guerrilla actions remove
+target nodes before 1976. The documented Monte Chingolo arsenal attack
+uses one non-graphic architectural blast that becomes a reconstructed,
+clearly labeled newspaper front page. Triple A is named as a separate
+para-state route.
 
 ### Frames 1722--1907
 
@@ -244,14 +253,18 @@ backgrounds.
 
 ### Frames 1908--2084
 
-A surviving rectangle becomes the football pitch. The wounded historical
-layer remains outside it.
+A surviving rectangle becomes the football pitch. Entry marks retain
+chronology, then recede so the championship and public celebration can
+occupy the frame as a national achievement. Political context returns in
+the exit pullback.
 
 ### Frames 2085--2258
 
 Pitch ellipse stretches into South Atlantic cartography. The route
-toward Malvinas interrupts in open ocean. During the 1983 beat, a civic
-line reconnects without becoming celebratory spectacle.
+toward Malvinas carries an explicit Argentine sovereignty claim and
+reaches soldiers shown with human scale, mutual aid, duty and sacrifice.
+It interrupts in open ocean. During the 1983 beat, a civic line reconnects
+without erasing the combatants' memory.
 
 ### Frames 2259--2444
 
@@ -304,22 +317,33 @@ metaphors.
 For 1930--1983, use chronology and concrete actors/events rather than a
 partisan moral thesis.
 
--   Perón and Eva: brief simplified silhouettes inside a broader
-    mass-politics composition.
--   Armed revolutionary organizations: represent explicitly as part of
-    political radicalization/armed violence, not as generic peaceful
-    crowds.
--   Para-state violence and institutional deterioration: represented
-    through interruption, fragmentation and competing routes.
+-   Perón and Eva: brief simplified silhouettes inside a composition that
+    shows industrial/worker incorporation and personalist centralization,
+    including compressed opposition, press, university and institutional
+    nodes.
+-   Montoneros and ERP: identify as `ORGANIZACIONES GUERRILLERAS
+    REVOLUCIONARIAS`; show concrete non-graphic kidnappings, assassinations,
+    explosive attacks and targeted nodes rather than generic chevrons.
+-   Monte Chingolo: documented ERP attack on the Batallón de Arsenales 601,
+    `23 DIC 1975`; one non-graphic façade explosion transitions through
+    smoke/halftone to a front page marked `RECREACIÓN GRÁFICA` with the
+    authored headline `TERRORISMO: EL ERP ATACA UN ARSENAL MILITAR`.
+-   Victims before 1976: civilian, political, union, police and military
+    nodes may leave precise empty rings; absence is not exclusive to the
+    dictatorship sequence.
+-   Triple A: named separately as para-state violence tied to verified
+    political/security nodes; never merged with guerrilla or regular forces.
 -   1976: military takeover transitions into dictatorship/state
     repression; do not make the date a heroic centerpiece.
 -   Dictatorship: visible copy is `1976–1983 · DICTADURA` only.
     **Prohibido:** the phrase `TERRORISMO DE ESTADO` must never appear
     on screen or in any visible copy (editorial lock: it invites
     biased political readings). No white-headscarf motif.
--   1978: sporting achievement can be emotionally real while the
-    surrounding wounded atlas remains visible.
--   1982: solemn South Atlantic treatment; no triumphalism.
+-   1978: sporting achievement and public celebration are fully national;
+    dictatorship context appears at entry/exit rather than enclosing every
+    sporting frame.
+-   1982: `RECLAMO ARGENTINO DE SOBERANÍA`; soldiers receive agency,
+    comradeship, duty and sacrifice without gore or invented outcomes.
 -   1983: short civic reconnection, `1983 · DEMOCRACIA`; no individual
     political leader as protagonist.
 
@@ -351,8 +375,8 @@ same production components that will survive into the final composition.
 
 Recommended benchmark: **00:57.4--01:12.4 (frames 1722--2171)**.
 
-Why this segment: - tests the light-but-somber palette; - tests wounded
-atlas continuity; - tests dictatorship → 1978 → South Atlantic
+Why this segment: - tests the light-but-somber palette; - tests controlled
+atlas continuity; - tests dictatorship → national celebration → South Atlantic
 transition; - contains both restrained and active camera language; -
 forces the memory line to change semantic roles without a hard reset; -
 is difficult enough that, if it works, the rest of the visual system is
