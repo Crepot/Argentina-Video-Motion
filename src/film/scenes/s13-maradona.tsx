@@ -11,7 +11,6 @@ import { K, ramp, win } from "../anim";
 import { crowdItems } from "../draw/crowd";
 import { Ball, Goal, PitchGround, standsCrowd, WorldCupTrophy } from "../draw/football";
 import { AnthemText, At, DateText, EventText } from "../draw/labels";
-import { Laurel } from "../draw/laurel";
 import { SheetGround } from "../draw/sheet";
 import { camIn, type CamKey } from "../film-camera";
 import { lineState, stateParts } from "../line";
@@ -80,10 +79,6 @@ const T = {
   lift: K([
     [2388, 0, "ceremonial"],
     [2402, 1],
-  ]),
-  laurel: K([
-    [2394, 0, "atlasDrift"],
-    [2436, 11],
   ]),
   net: K([
     [2351, 0],
@@ -156,9 +151,9 @@ const ballAt = (f: number): { x: number; y: number; h: number } => {
 
 /* ---------------------------------------------------------------- camera */
 
-const camRun = (f: number, dx: number, zoom: number, tilt = 55): CamKey => {
+const camRun = (f: number, dx: number, zoom: number, tilt = 55, rot = 0): CamKey => {
   const p = positionAt(MARADONA, f);
-  return camIn(PL, f, p.x + dx, p.y + 40, zoom, tilt, 0);
+  return camIn(PL, f, p.x + dx, p.y + 40, zoom, tilt, rot);
 };
 
 export const KEYS_13: readonly CamKey[] = [
@@ -166,10 +161,10 @@ export const KEYS_13: readonly CamKey[] = [
   camRun(2286, 90, 2.2),
   camRun(2300, 110, 2.4),
   camRun(2314, 110, 2.45),
-  camRun(2328, 100, 2.45),
-  camRun(2342, 60, 2.5, 56),
-  camIn(PL, 2358, 1360, -170, 2.0, 52, 0),
-  camIn(PL, 2380, 1100, -380, 1.9, 50, 0),
+  camRun(2328, 100, 2.45, 55, -4),
+  camRun(2342, 60, 2.5, 56, -12),
+  camIn(PL, 2358, 1360, -170, 2.0, 52, -10),
+  camIn(PL, 2380, 1100, -380, 1.9, 50, -4),
   camIn(PL, 2400, 1000, -330, 2.7, 46, 0),
   camIn(PL, 2424, 1000, -330, 1.8, 30, 0),
 ];
@@ -177,7 +172,7 @@ export const KEYS_13: readonly CamKey[] = [
 /* ------------------------------------------------------------------- stage */
 
 const Ground13: React.FC<{ f: number; camera: CameraState }> = ({ f, camera }) => (
-  <SheetGround camera={camera} pl={PL} opacity={1 - T.exit(f) * 0.85}>
+  <SheetGround camera={camera} pl={PL} opacity={1 - T.exit(f) * 0.85 - 0.15 * ramp(f, 2448, 2466)}>
     <PitchGround draw={T.pitch(f)} fill={T.fill(f)} />
   </SheetGround>
 );
@@ -211,10 +206,8 @@ const items13 = (ctx: FilmCtx): StageItem[] => {
 const Overlay13: React.FC<{ f: number }> = ({ f }) => {
   const lab = win(f, 2358, 2368, 2426, 2440);
   const anth = win(f, 2392, 2404, 2470, 2486);
-  const n = T.laurel(f);
   return (
     <>
-      <Laurel cx={960} cy={500} rx={430} ry={340} opacity={ramp(f, 2392, 2400) * (1 - ramp(f, 2432, 2450))} left={{ drawn: n, gold: n, base: PALETTE.goldMuted }} right={{ drawn: 0, gold: 0, guide: 0.25 }} />
       <At x={168} y={96} id="label.1986">
         <DateText text="MÉXICO · 1986" size={96} o={lab} enter={ramp(f, 2358, 2368)} />
         <EventText lines={["ARGENTINA · CAMPEÓN DEL MUNDO"]} o={lab} enter={ramp(f, 2362, 2372)} tracking={0.14} />
@@ -247,7 +240,7 @@ const trophyItems = (ctx: FilmCtx): StageItem[] => {
   ];
 };
 
-export const STAGES_13: readonly FilmStage[] = [{ id: "s13", from: 2250, to: 2450, Ground: Ground13, items: (c) => [...items13(c), ...trophyItems(c)], Overlay: Overlay13 }];
+export const STAGES_13: readonly FilmStage[] = [{ id: "s13", from: 2250, to: 2468, Ground: Ground13, items: (c) => [...items13(c), ...trophyItems(c)], Overlay: Overlay13 }];
 
 /* ------------------------------------------------------------- memory line */
 

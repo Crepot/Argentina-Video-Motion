@@ -56,31 +56,54 @@ export const PitchGround: React.FC<{ draw: number; fill: number; color?: string;
 
 const ns = { vectorEffect: "non-scaling-stroke" as const };
 
-/** Goal frame standing on a goal line (x = ±HL), with a net that ripples. */
+/**
+ * Goal on a goal line (x = ±HL) with a net that ripples. The film camera is
+ * affine and looks along the pitch, so the mouth plane is edge-on; the goal
+ * is read through its volume: two side nets, the roof net and the posts.
+ */
 export const Goal: React.FC<{ p: Projector; side: 1 | -1; ripple: number; opacity?: number }> = ({ p, side, ripple, opacity = 1 }) => {
   const x = side * HL;
   const half = 3.66 * M;
   const h = 2.44 * M;
-  const depth = 60 * side;
-  const front = planeMatrix(p, [x, -half, 0], [0, 1, 0], [0, 0, -1]);
-  const back = planeMatrix(p, [x + depth + ripple * 24 * side, -half, 0], [0, 1, 0], [0, 0, -1]);
+  const depth = (70 + ripple * 26) * side;
+  const sideNet = (yy: number) => planeMatrix(p, [x, yy, 0], [side, 0, 0], [0, 0, -1]);
+  const roof = planeMatrix(p, [x, -half, h], [side, 0, 0], [0, 1, 0]);
+  const d = Math.abs(depth);
   let mesh = "";
-  for (let k = 1; k < 10; k++) {
-    mesh += `M ${(k * 2 * half) / 10} 0 V ${-h} `;
+  for (let k = 1; k < 6; k++) {
+    mesh += `M ${(k * d) / 6} 0 V ${-h} `;
   }
   for (let k = 1; k < 4; k++) {
-    mesh += `M 0 ${(-k * h) / 4} H ${2 * half} `;
+    mesh += `M 0 ${(-k * h) / 4} H ${d} `;
   }
+  let roofMesh = "";
+  for (let k = 1; k < 10; k++) {
+    roofMesh += `M 0 ${(k * 2 * half) / 10} H ${d} `;
+  }
+  const post = (yy: number) => {
+    const a = p.point(x, yy, 0);
+    const b = p.point(x, yy, h);
+    return `M ${a[0].toFixed(1)} ${a[1].toFixed(1)} L ${b[0].toFixed(1)} ${b[1].toFixed(1)}`;
+  };
+  const t0 = p.point(x, -half, h);
+  const t1 = p.point(x, half, h);
+  const frame = `${post(-half)} ${post(half)} M ${t0[0].toFixed(1)} ${t0[1].toFixed(1)} L ${t1[0].toFixed(1)} ${t1[1].toFixed(1)}`;
   return (
     <g opacity={opacity}>
-      <g transform={back}>
-        <path d={mesh} stroke={PALETTE.deepBlueSoft} strokeWidth={0.7} opacity={0.55} {...ns} />
-        <path d={`M 0 0 V ${-h} H ${2 * half} V 0`} fill="none" stroke={PALETTE.deepBlueSoft} strokeWidth={0.9} opacity={0.7} {...ns} />
+      {[-half, half].map((yy) => (
+        <g key={yy} transform={sideNet(yy)}>
+          <rect x={0} y={-h} width={d} height={h} fill={PALETTE.paperWarm} opacity={0.35} />
+          <path d={mesh} stroke={PALETTE.deepBlueSoft} strokeWidth={0.7} opacity={0.6} {...ns} />
+          <path d={`M 0 ${-h} H ${d} V 0`} fill="none" stroke={PALETTE.deepBlueSoft} strokeWidth={1} opacity={0.8} {...ns} />
+        </g>
+      ))}
+      <g transform={roof}>
+        <rect x={0} y={0} width={d} height={2 * half} fill={PALETTE.paperWarm} opacity={0.3} />
+        <path d={roofMesh} stroke={PALETTE.deepBlueSoft} strokeWidth={0.7} opacity={0.55} {...ns} />
+        <path d={`M ${d} 0 V ${2 * half}`} stroke={PALETTE.deepBlueSoft} strokeWidth={1} opacity={0.8} {...ns} />
       </g>
-      <g transform={front}>
-        <path d={`M 0 0 V ${-h} H ${2 * half} V 0`} fill="none" stroke={PALETTE.paperWarm} strokeWidth={4} {...ns} />
-        <path d={`M 0 0 V ${-h} H ${2 * half} V 0`} fill="none" stroke={PALETTE.deepBlue} strokeWidth={1.2} {...ns} />
-      </g>
+      <path d={frame} fill="none" stroke={PALETTE.paperWarm} strokeWidth={5} strokeLinecap="round" />
+      <path d={frame} fill="none" stroke={PALETTE.deepBlue} strokeWidth={1.4} strokeLinecap="round" />
     </g>
   );
 };

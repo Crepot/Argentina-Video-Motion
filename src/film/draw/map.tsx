@@ -2,6 +2,7 @@ import React from "react";
 import { mixColor, PALETTE } from "../../theme/palette";
 import type { Point } from "../../types/paths";
 import {
+  AFRO_EURASIA,
   ANTARCTIC_COAST,
   ARGENTINA,
   ARGENTINA_FUEGO,
@@ -33,6 +34,7 @@ const CONTINENTS = {
   southAmerica: lonLatPath(SOUTH_AMERICA, true, 2),
   fuego: lonLatPath(TIERRA_DEL_FUEGO, true, 2),
   euroAfrica: lonLatPath(EURO_AFRICA, true, 2),
+  afroEurasia: lonLatPath(AFRO_EURASIA, true, 2),
   britain: lonLatPath(BRITAIN, true, 2),
   northAmerica: lonLatPath(NORTH_CARIBBEAN, true, 2),
   florida: lonLatPath(FLORIDA_US, true, 2),

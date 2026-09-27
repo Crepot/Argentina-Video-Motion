@@ -13,7 +13,7 @@ const tint = (c: string, tone: number) => mixColor(c, PALETTE.paperCool, tone);
 
 /* ------------------------------------------------------------ vehicles */
 
-export type VehicleKind = "truck" | "jeep" | "sedan";
+export type VehicleKind = "truck" | "jeep" | "sedan" | "bus";
 
 const VEHICLES: Record<
   VehicleKind,
@@ -41,6 +41,17 @@ const VEHICLES: Record<
       [32, -13],
     ],
     r: 12,
+  },
+  // City bus (film, 1990s–2000s street; generic silhouette).
+  bus: {
+    body: "M -128 -16 H 126 L 128 -84 C 128 -92, 122 -96, 114 -96 H -118 C -124 -96, -128 -92, -128 -86 Z",
+    glass: "M -116 -86 H -84 V -60 H -116 Z M -76 -86 H -44 V -60 H -76 Z M -36 -86 H -4 V -60 H -36 Z M 4 -86 H 36 V -60 H 4 Z M 44 -86 H 76 V -60 H 44 Z M 86 -86 H 120 V -52 H 86 Z",
+    lines: "M -128 -46 H 128 M 80 -50 V -18",
+    wheels: [
+      [-88, -12],
+      [84, -12],
+    ],
+    r: 13,
   },
   // Dark 1970s saloon car (generic silhouette).
   sedan: {
@@ -71,6 +82,8 @@ export const Vehicle: React.FC<{
   const body =
     kind === "sedan"
       ? tint(mixColor(PALETTE.deepBlue, PALETTE.deepBlueSoft, 0.4), tone)
+      : kind === "bus"
+      ? tint(mixColor(PALETTE.skyBlue, PALETTE.grayBlue, 0.35), tone)
       : tint(mixColor(PALETTE.deepBlueSoft, PALETTE.grayBlue, 0.4), tone);
   const cover = tint(mixColor(PALETTE.grayBlue, PALETTE.deepBlueSoft, 0.3), tone);
   const line = tint(PALETTE.deepBlue, tone);

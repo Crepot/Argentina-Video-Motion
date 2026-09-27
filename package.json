@@ -33,7 +33,9 @@
     "validate:benchmark": "jiti scripts/validate-benchmark.ts",
     "validate:benchmark-v2": "jiti scripts/validate-benchmark-v2.ts",
     "render:benchmark-v2": "remotion render src/index.ts Benchmark-V2-1722-2171 out/benchmark-v2-1722-2171/Benchmark-V2-1722-2171_h264_1080p30.mp4 --codec=h264 && jiti scripts/fix-aac-priming.ts out/benchmark-v2-1722-2171/Benchmark-V2-1722-2171_h264_1080p30.mp4 2048",
-    "render:benchmark": "remotion render src/index.ts Benchmark-1722-2171 out/benchmark-1722-2171/Benchmark-1722-2171_h264_1080p30.mp4 --codec=h264 && jiti scripts/fix-aac-priming.ts out/benchmark-1722-2171/Benchmark-1722-2171_h264_1080p30.mp4 2048"
+    "render:benchmark": "remotion render src/index.ts Benchmark-1722-2171 out/benchmark-1722-2171/Benchmark-1722-2171_h264_1080p30.mp4 --codec=h264 && jiti scripts/fix-aac-priming.ts out/benchmark-1722-2171/Benchmark-1722-2171_h264_1080p30.mp4 2048",
+    "validate:full": "JITI_JSX=1 node --import ./scripts/stub-assets.mjs ./node_modules/jiti/lib/jiti-cli.mjs scripts/validate-full.ts",
+    "render:full": "remotion render src/index.ts Argentina-Full out/argentina-full-v1/ARGENTINA_FULL_v1.mp4 --codec=h264 && jiti scripts/fix-aac-priming.ts out/argentina-full-v1/ARGENTINA_FULL_v1.mp4 2048"
   },
   "sideEffects": [
     "*.css"

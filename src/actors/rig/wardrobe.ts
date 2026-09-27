@@ -315,7 +315,11 @@ export const WARDROBES = {
   argentina1986: { id: "argentina1986", top: mixColor(P.deepBlue, P.deepBlueSoft, 0.35), bottom: P.paperWarm, boots: P.deepBlue, skin, hat: "hairShort", hatColor: P.deepBlue, head: "standard", skirt: 0, shorts: true, socks: mixColor(P.deepBlue, P.deepBlueSoft, 0.35), props: [] },
   england1986: { id: "england1986", top: P.paperWarm, bottom: mixColor(P.deepBlueSoft, P.grayBlue, 0.25), boots: P.deepBlue, skin, hat: "hairWavy", hatColor: P.deepBlueSoft, head: "standard", skirt: 0, shorts: true, socks: P.paperWarm, props: [] },
   /** Messi (HistoricalFigure): striped kit; 2014 short hair, 2022 beard. */
-  messi2014: { id: "messi2014", top: P.paperWarm, bottom: P.deepBlue, boots: P.deepBlue, skin, hat: "hairShort", hatColor: P.deepBlueSoft, head: "round", skirt: 0, shorts: true, socks: P.paperWarm, stripes: P.skyBlue, props: [] },
+  /** Young Messi in the new-century ascent (striped national kit). */
+  messiYoung: { id: "messiYoung", top: P.paperWarm, bottom: P.deepBlue, boots: P.deepBlue, skin, hat: "hairShort", hatColor: P.deepBlueSoft, head: "round", skirt: 0, shorts: true, socks: P.paperWarm, stripes: P.skyBlue, props: [] },
+  /** 2014 final: Argentina played in the dark away kit. */
+  messi2014: { id: "messi2014", top: mixColor(P.deepBlueSoft, P.deepBlue, 0.25), bottom: P.deepBlue, boots: P.deepBlue, skin, hat: "hairShort", hatColor: P.deepBlueSoft, head: "round", skirt: 0, shorts: true, socks: mixColor(P.deepBlueSoft, P.deepBlue, 0.25), props: [] },
+  argentina2014: { id: "argentina2014", top: mixColor(P.deepBlueSoft, P.deepBlue, 0.25), bottom: P.deepBlue, boots: P.deepBlue, skin, hat: "hairShort", hatColor: P.deepBlue, head: "standard", skirt: 0, shorts: true, socks: mixColor(P.deepBlueSoft, P.deepBlue, 0.25), props: [] },
   messi2022: { id: "messi2022", top: P.paperWarm, bottom: P.deepBlue, boots: P.deepBlue, skin, hat: "hairSide", hatColor: P.deepBlue, head: "round", skirt: 0, shorts: true, socks: P.paperWarm, stripes: P.skyBlue, beard: true, props: [] },
   argentinaKit: { id: "argentinaKit", top: P.paperWarm, bottom: P.deepBlue, boots: P.deepBlue, skin, hat: "hairShort", hatColor: P.deepBlueSoft, head: "standard", skirt: 0, shorts: true, socks: P.paperWarm, stripes: P.skyBlue, props: [] },
   argentinaKitB: { id: "argentinaKitB", top: P.paperWarm, bottom: P.deepBlue, boots: P.deepBlue, skin, hat: "hairWavy", hatColor: P.deepBlue, head: "round", skirt: 0, shorts: true, socks: P.paperWarm, stripes: P.skyBlue, beard: true, props: [] },

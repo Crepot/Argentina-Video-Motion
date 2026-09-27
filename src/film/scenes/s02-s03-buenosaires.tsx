@@ -30,7 +30,7 @@ import { SheetGround } from "../draw/sheet";
 import { Ship } from "../draw/ship";
 import { standMatrix } from "../draw/stand";
 import { camIn, type CamKey } from "../film-camera";
-import { IDENTITY } from "../space";
+import { IDENTITY, toWorld } from "../space";
 import type { FilmCtx, FilmStage, LineEra, StageItem } from "../types";
 
 /**
@@ -138,7 +138,9 @@ export const KEYS_02_03: readonly CamKey[] = [
   camIn(PL, 218, 520, 60, 0.9, 30, 0),
   camIn(PL, 244, 360, 380, 1.25, 50, 0),
   camIn(PL, 266, 160, 420, 1.45, 53, 0),
-  camIn(PL, 288, 300, 300, 0.95, 36, 0),
+  camIn(PL, 284, 300, 300, 0.95, 36, 0),
+  // The crane-up to the ocean: most of the travel happens once the view is wide.
+  { f: 298, x: lerp(toWorld(PL, [300, 300])[0], 6900, 0.25), y: lerp(toWorld(PL, [300, 300])[1], -1150, 0.25), zoom: 1.05, tilt: 32, rot: 38 },
   { f: 312, x: 6900, y: -1150, zoom: 0.33, tilt: 28, rot: 26 },
   { f: 332, x: 6500, y: -700, zoom: 0.42, tilt: 20, rot: 38 },
   camIn(PL, 356, CABILDO_CX, 330, 0.62, 18, 0),
