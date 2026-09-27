@@ -6,11 +6,14 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@fontsource/cormorant-garamond": "5.3.0",
+    "@fontsource/source-sans-3": "5.3.0",
     "@remotion/cli": "4.0.529",
+    "@remotion/media": "4.0.529",
+    "@remotion/tailwind-v4": "4.0.529",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.529",
-    "@remotion/tailwind-v4": "4.0.529",
     "tailwindcss": "4.0.0"
   },
   "devDependencies": {
@@ -18,6 +21,7 @@
     "@types/react": "19.2.7",
     "@types/web": "0.0.166",
     "eslint": "9.19.0",
+    "jiti": "2.7.0",
     "prettier": "3.8.1",
     "typescript": "5.9.3"
   },
@@ -25,7 +29,11 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "validate:benchmark": "jiti scripts/validate-benchmark.ts",
+    "validate:benchmark-v2": "jiti scripts/validate-benchmark-v2.ts",
+    "render:benchmark-v2": "remotion render src/index.ts Benchmark-V2-1722-2171 out/benchmark-v2-1722-2171/Benchmark-V2-1722-2171_h264_1080p30.mp4 --codec=h264 && jiti scripts/fix-aac-priming.ts out/benchmark-v2-1722-2171/Benchmark-V2-1722-2171_h264_1080p30.mp4 2048",
+    "render:benchmark": "remotion render src/index.ts Benchmark-1722-2171 out/benchmark-1722-2171/Benchmark-1722-2171_h264_1080p30.mp4 --codec=h264 && jiti scripts/fix-aac-priming.ts out/benchmark-1722-2171/Benchmark-1722-2171_h264_1080p30.mp4 2048"
   },
   "sideEffects": [
     "*.css"

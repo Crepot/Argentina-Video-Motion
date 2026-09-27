@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* V2 ground plane under a tilted camera: strokes stay at their screen width
+   instead of being foreshortened with the ground (see stage/projection.ts). */
+.v2-nss path,
+.v2-nss circle,
+.v2-nss ellipse,
+.v2-nss rect,
+.v2-nss line {
+  vector-effect: non-scaling-stroke;
+}

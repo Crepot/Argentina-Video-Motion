@@ -76,7 +76,7 @@ The ending deliberately uses the near-silence after approximately
 
   10            00:57.4--01:03.6          1722--1907 1976--1983      Military takeover →
                                                      context         dictatorship → state
-                                                                     repression / terrorism.
+                                                                     repression.
                                                                      Atlas becomes wounded and
                                                                      discontinuous; remain
                                                                      light/desaturated rather
@@ -313,8 +313,10 @@ partisan moral thesis.
     through interruption, fragmentation and competing routes.
 -   1976: military takeover transitions into dictatorship/state
     repression; do not make the date a heroic centerpiece.
--   Dictatorship: `DICTADURA · TERRORISMO DE ESTADO`; no white-headscarf
-    motif.
+-   Dictatorship: visible copy is `1976–1983 · DICTADURA` only.
+    **Prohibido:** the phrase `TERRORISMO DE ESTADO` must never appear
+    on screen or in any visible copy (editorial lock: it invites
+    biased political readings). No white-headscarf motif.
 -   1978: sporting achievement can be emotionally real while the
     surrounding wounded atlas remains visible.
 -   1982: solemn South Atlantic treatment; no triumphalism.
