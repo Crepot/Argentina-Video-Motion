@@ -304,7 +304,11 @@ export const LabelsOverlayV2: React.FC = () => {
       ) : null}
       {malvinas > 0.002 ? (
         <AnchoredLabel id={LABEL_CUES_V2.malvinas.id} anchor={LABEL_CUES_V2.malvinas.anchor} camera={camera} mode="hybrid" align="center" maxWidthPx={LABEL_CUES_V2.malvinas.maxWidthPx}>
-          <div style={{ ...TYPE.map, color: PALETTE.deepBlue, opacity: malvinas, fontSize: 20 }}>{TEXT_V2.malvinas}</div>
+          {TEXT_V2.malvinas.split(" · ").map((line) => (
+            <div key={line} style={{ ...TYPE.map, color: PALETTE.deepBlue, opacity: malvinas, fontSize: 20 }}>
+              {line}
+            </div>
+          ))}
           <div style={{ ...TYPE.map, color: PALETTE.deepBlueSoft, opacity: malvinas * 0.85, fontSize: 14, marginTop: 6 }}>{TEXT_V2.malvinasNote}</div>
         </AnchoredLabel>
       ) : null}
