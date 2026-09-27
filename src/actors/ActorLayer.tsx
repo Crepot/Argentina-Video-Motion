@@ -6,6 +6,8 @@ import { evaluateActor, type ActorFrame, type ActorTrack } from "./action-track"
 import { BUILDS, WARDROBES } from "./rig/wardrobe";
 
 import { perspectiveAt } from "./perspective";
+import { HorseRig, SADDLE } from "./HorseRig";
+import { solveJoints } from "./rig/skeleton";
 
 export interface PlacedActor {
   track: ActorTrack;
@@ -69,7 +71,7 @@ export const ActorView: React.FC<{
   const rise = frame.rise;
   const wardrobe = WARDROBES[track.wardrobe];
   const heightK = Math.max(0.0001, rise);
-  const m = billboardMatrix(p, frame.x, frame.y, s, frame.facing);
+  const m = billboardMatrix(p, frame.x, frame.y, s, frame.facing, track.lift ?? 0);
   const mark = rise < 0.999;
   const absorb = frame.absorb;
   return (
@@ -96,6 +98,35 @@ export const ActorView: React.FC<{
       {rise > 0.02 ? (
         <g transform={m}>
           <g transform={`scale(1 ${heightK.toFixed(4)})`} opacity={1 - absorb * 0.92}>
+            {track.mount ? (
+              <HorseRig
+                phase={frame.dist / (150 * track.scale)}
+                gait={Math.min(1, frame.speed / (1.2 * track.scale))}
+                coat={track.mount.coat}
+                kind={track.mount.kind}
+                pxPerUnit={px}
+                tone={track.tone ?? 0}
+                detail={track.detail}
+              />
+            ) : null}
+            <g
+              transform={
+                track.mount
+                  ? (() => {
+                      const pel = solveJoints(frame.pose, BUILDS[track.build ?? "standard"]).pelvis;
+                      return `translate(${(SADDLE[0] - pel[0]).toFixed(2)} ${(SADDLE[1] - pel[1]).toFixed(2)})`;
+                    })()
+                  : undefined
+              }
+            >
+            {track.mount?.riderless ? (
+              track.mount.pack ? (
+                <g>
+                  <rect x={-24} y={-78} width={38} height={24} rx={4} fill={mixColor(PALETTE.paperWarm, PALETTE.grayBlue, 0.45)} stroke={PALETTE.deepBlue} strokeWidth={1 / px} />
+                  <path d={`M -24 -66 H 14 M -5 -78 V -54`} stroke={PALETTE.deepBlue} strokeWidth={0.8 / px} />
+                </g>
+              ) : null
+            ) : (
             <ActorRig2D
               uid={track.id.replace(/[^a-zA-Z0-9-]/g, "_")}
               pose={frame.pose}
@@ -108,6 +139,8 @@ export const ActorView: React.FC<{
               held={frame.held}
               heldGold={frame.held ? 0.85 : 0}
             />
+            )}
+            </g>
           </g>
           {absorb > 0.001 ? <AbsorbBars absorb={absorb} color={barColor} px={px} /> : null}
         </g>

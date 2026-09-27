@@ -69,7 +69,7 @@ const actorItems = (ctx: StageContext): StageItem[] => {
 };
 
 /** Ground plane (inside world layers) for the whole benchmark. */
-const GroundV2: React.FC<{ f: number }> = ({ f }) => {
+export const GroundV2: React.FC<{ f: number; fibres?: boolean }> = ({ f, fibres = true }) => {
   const px = usePx();
   const V1 = TRACKS;
   const P = TRACKS_V2.pitch;
@@ -79,9 +79,11 @@ const GroundV2: React.FC<{ f: number }> = ({ f }) => {
   const sp = (n: number) => n;
   return (
     <>
-      <WorldLayer layer="paperFiber">
-        <PaperFibres seed={1810} worldOpacity={0.032} screenGrainOpacity={0} fiberCount={520} pxToWorld={px(1)} />
-      </WorldLayer>
+      {fibres ? (
+        <WorldLayer layer="paperFiber">
+          <PaperFibres seed={1810} worldOpacity={0.032} screenGrainOpacity={0} fiberCount={520} pxToWorld={px(1)} />
+        </WorldLayer>
+      ) : null}
       <WorldLayer layer="cartography">
         <g className="v2-nss">
         <DictaduraGround f={f} px={sp} />
@@ -174,6 +176,21 @@ export const WorldBelowMemoryLineV2: React.FC = () => {
       <GroundV2 f={f} />
     </>
   );
+};
+
+/** All V2 standing items for a stage context (used by the full film). */
+export const v2StageItems = (ctx: StageContext): StageItem[] => [...dictaduraItems(ctx), ...stadiumItems(ctx), ...atlanticItems(ctx), ...actorItems(ctx)];
+
+/** The V2 ocean toponym (world layer), reusable by the full film. */
+export const V2OceanLabel: React.FC<{ f: number }> = ({ f }) => {
+  const oceano = TRACKS_V2.labels.oceano(f);
+  return oceano > 0.002 ? (
+    <WorldLayer layer="worldLabels">
+      <text x={LABEL_CUES_V2.oceano.anchor[0]} y={LABEL_CUES_V2.oceano.anchor[1]} fill={PALETTE.deepBlueSoft} fontFamily={TYPE.map.fontFamily} fontWeight={TYPE.map.fontWeight} fontSize={23} letterSpacing={6.5} textAnchor="middle" opacity={oceano}>
+        {TEXT_V2.oceano}
+      </text>
+    </WorldLayer>
+  ) : null;
 };
 
 /** Billboards and foreground plane, depth-sorted (above the memory line). */
@@ -288,6 +305,7 @@ export const LabelsOverlayV2: React.FC = () => {
       {malvinas > 0.002 ? (
         <AnchoredLabel id={LABEL_CUES_V2.malvinas.id} anchor={LABEL_CUES_V2.malvinas.anchor} camera={camera} mode="hybrid" align="center" maxWidthPx={LABEL_CUES_V2.malvinas.maxWidthPx}>
           <div style={{ ...TYPE.map, color: PALETTE.deepBlue, opacity: malvinas, fontSize: 20 }}>{TEXT_V2.malvinas}</div>
+          <div style={{ ...TYPE.map, color: PALETTE.deepBlueSoft, opacity: malvinas * 0.85, fontSize: 14, marginTop: 6 }}>{TEXT_V2.malvinasNote}</div>
         </AnchoredLabel>
       ) : null}
     </div>

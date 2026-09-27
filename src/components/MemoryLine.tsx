@@ -32,6 +32,16 @@ export interface MemoryLineProps {
    * non-scaling-stroke, so the ground foreshortening never thins the line.
    */
   screenSpaceStroke?: boolean;
+  /**
+   * Full film: the geometry of the current era, already evaluated by the
+   * film memory-line evaluator (same 96-sample topology). When omitted the
+   * benchmark state machine (`state.morph`) supplies it.
+   */
+  points?: readonly Point[];
+  /** Earned gold core drawn inside the line (storyboard §A: milestones only). */
+  core?: readonly { start: number; end: number; opacity: number }[];
+  /** World units per drawing unit when drawn inside a scaled sheet. */
+  unitScale?: number;
 }
 
 export const MemoryLine: React.FC<MemoryLineProps> = ({
@@ -41,10 +51,14 @@ export const MemoryLine: React.FC<MemoryLineProps> = ({
   strokeWidthPx,
   debug,
   screenSpaceStroke = false,
+  points,
+  core,
+  unitScale = 1,
 }) => {
-  const px = usePx();
+  const pxW = usePx();
+  const px = (n: number) => pxW(n) / unitScale;
   const sw = screenSpaceStroke ? (n: number) => n : px;
-  const pts = memoryLineGeometry(state.morph);
+  const pts = points ?? memoryLineGeometry(state.morph);
   const ranges = mergeRanges(state.ranges);
   const head = state.head ? pointAndAngleAt(pts, state.head.s) : null;
   return (
@@ -66,6 +80,21 @@ export const MemoryLine: React.FC<MemoryLineProps> = ({
           opacity={r.opacity}
         />
       ))}
+      {core?.map((c, i) =>
+        c.opacity > 0.002 && c.end > c.start ? (
+          <path
+            key={`core${i}`}
+            d={polylineToPath(sampleRange(pts, c.start, c.end))}
+            fill="none"
+            stroke={PALETTE.goldMuted}
+            strokeWidth={sw(strokeWidthPx * 0.42)}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            vectorEffect={screenSpaceStroke ? "non-scaling-stroke" : undefined}
+            opacity={c.opacity}
+          />
+        ) : null,
+      )}
       {head && state.head && state.head.opacity > 0.002 ? (
         <g opacity={state.head.opacity}>
           <circle

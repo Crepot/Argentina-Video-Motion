@@ -5,8 +5,9 @@ import type { LabelCue } from "../types/labels";
 /**
  * Visible copy of Benchmark V2 (Spanish only, §6.1). Editorial lock §2.2:
  * the period is named only `DICTADURA`; the phrase banned by §2.2
- * is prohibited in any visible copy. The Malvinas map note uses the
- * documented neutral legend `SOBERANÍA DISPUTADA`.
+ * is prohibited in any visible copy. Malvinas (editorial lock §2.9): the
+ * primary legend states the Argentine sovereignty claim; the British
+ * administration is a secondary legal note.
  */
 export const TEXT_V2 = {
   year1976: "1976",
@@ -18,7 +19,8 @@ export const TEXT_V2 = {
   year1982: "1982",
   guerraMalvinas: "GUERRA DE MALVINAS",
   oceano: "OCÉANO ATLÁNTICO SUR",
-  malvinas: "ISLAS MALVINAS · SOBERANÍA DISPUTADA",
+  malvinas: "ISLAS MALVINAS · RECLAMO ARGENTINO DE SOBERANÍA",
+  malvinasNote: "BAJO ADMINISTRACIÓN BRITÁNICA",
 } as const;
 
 /** Screen-stabilized anchors are chosen per camera state (projected once). */

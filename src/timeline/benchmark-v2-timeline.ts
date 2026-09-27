@@ -392,19 +392,26 @@ export const TRACKS_V2 = {
       [2136, 0.5, "atlasDrift"],
       [2150, 0],
     ]),
+    // Keys after 2171 exist only for the full film (the benchmark ends at 2171).
     year1982: K([
       [2138, 0],
       [2144, 0.18],
       [2145, 0.18, "ceremonial"],
       [2155, 0.92],
+      [2224, 0.92, "atlasDrift"],
+      [2240, 0],
     ]),
     guerra: K([
       [2154, 0, "ceremonial"],
       [2168, 0.84],
+      [2224, 0.84, "atlasDrift"],
+      [2240, 0],
     ]),
     malvinas: K([
       [2152, 0, "ceremonial"],
       [2166, 0.8],
+      [2174, 0.8, "atlasDrift"],
+      [2186, 0],
     ]),
   },
 } as const;

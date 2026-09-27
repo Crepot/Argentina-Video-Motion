@@ -54,7 +54,8 @@ export const createProjector = (
   const a = (-camera.rotation * Math.PI) / 180;
   const ex = rotateScreen([zoom, 0], a);
   const ey = rotateScreen([0, zoom * squash], a);
-  const eh = rotateScreen([0, -zoom * rise], a);
+  // Upright objects stay vertical on screen (the camera yaws, it does not roll them).
+  const eh: Point = [0, -zoom * rise];
   const point = (x: number, y: number, h = 0): Point => {
     const dx = x - camera.x;
     const dy = y - camera.y;

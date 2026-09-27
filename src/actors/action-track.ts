@@ -12,6 +12,15 @@ import {
   kickPose,
   liftPose,
   standPose,
+  ridePose,
+  armsRaisedPose,
+  writePose,
+  dribblePose,
+  embracePose,
+  pointPose,
+  carryPose,
+  hoistPose,
+  helpPose,
   strideFor,
   type GaitStyle,
 } from "./rig/poses";
@@ -35,7 +44,17 @@ export type ActionKind =
   | "kick"
   | "dive"
   | "lift"
-  | "flag";
+  | "flag"
+  | "ride"
+  | "armsUp"
+  | "write"
+  | "dribble"
+  | "embrace"
+  | "point"
+  | "carry"
+  | "hoist"
+  | "help"
+  | "umbrellaWalk";
 
 export interface PosKey {
   f: number;
@@ -84,6 +103,10 @@ export interface ActorTrack {
     exitDur?: number;
   };
   held?: { from: number; to: number; prop: "trophy" };
+  /** Standing height above the ground (rooftops, balconies), world units. */
+  lift?: number;
+  /** Rider on a horse (HorseRig): the horse is drawn under the rig. */
+  mount?: { kind: "horse" | "mule"; coat: "light" | "dark" | "gray"; flag?: boolean; riderless?: boolean; pack?: boolean };
 }
 
 export interface ActorFrame {
@@ -100,6 +123,10 @@ export interface ActorFrame {
   absorb: number;
   clothPhase: number;
   held: "trophy" | null;
+  /** World units travelled per frame (drives mount gait amplitude). */
+  speed: number;
+  /** Distance travelled (gait phase for mounts). */
+  dist: number;
 }
 
 const segProgress = (f: number, a: PosKey, b: PosKey) =>
@@ -177,6 +204,28 @@ const poseFor = (
       return liftPose(win, breath);
     case "flag":
       return flagHoldPose(win, breath);
+    case "ride":
+      return ridePose(dist / (150 * track.scale) + seedPhase, b ?? 0.3);
+    case "armsUp":
+      return armsRaisedPose(win, breath, b ?? 0.95);
+    case "write":
+      return writePose(f / 40 + seedPhase);
+    case "dribble":
+      return dribblePose(dist / (strideFor("run") * track.scale) + seedPhase, key.amount ?? 14);
+    case "embrace":
+      return embracePose(breath, win);
+    case "point":
+      return pointPose(win, breath);
+    case "carry":
+      return carryPose(dist / (strideFor("walk") * track.scale) + seedPhase);
+    case "hoist":
+      return hoistPose(win, breath);
+    case "help":
+      return helpPose(breath);
+    case "umbrellaWalk": {
+      const g = gaitPose(dist / (strideFor("walk") * track.scale) + seedPhase, "walk", b ?? 0.35);
+      return { ...g, shN: 32, elN: 128 };
+    }
     default:
       return standPose(breath, b ?? 0.4);
   }
@@ -202,6 +251,8 @@ export const evaluateActor = (track: ActorTrack, f: number): ActorFrame => {
     absorb: 0,
     clothPhase: 0,
     held: null,
+    speed: 0,
+    dist: 0,
   };
   if (f < life.from || f > life.to) {
     return hidden;
@@ -265,6 +316,8 @@ export const evaluateActor = (track: ActorTrack, f: number): ActorFrame => {
     absorb,
     clothPhase: pos.dist / 60 + f / 45,
     held,
+    speed: Math.abs(positionAt(track, f + 1).dist - pos.dist),
+    dist: pos.dist,
   };
 };
 

@@ -229,6 +229,55 @@ const hatPath = (hat: HatStyle): { d: string; visor?: string; band?: string } | 
       return {
         d: "M -7.2 5.0 C -8.6 -2.0, -5.0 -8.8, 0.6 -8.6 C 5.4 -8.4, 7.6 -4.8, 7.0 -1.4 L 5.6 -1.8 C 4.6 -4.8, -2.6 -5.4, -3.2 1.6 L -3.0 6.6 Z",
       };
+    case "bicorne":
+      // Worn crosswise ("en bataille"): the broad crescent reads in profile.
+      return {
+        d: "M -12.4 -2.6 C -11.2 -9.6, -4.2 -13.4, 0.4 -13.2 C 5.2 -13.2, 11.6 -9.4, 12.6 -2.8 C 7.2 -5.6, -6.8 -5.8, -12.4 -2.6 Z",
+        band: "M -1.2 -10.8 C 0.2 -12.2, 2.2 -12.2, 2.6 -10.4 C 2.2 -8.8, -0.4 -8.8, -1.2 -10.8 Z",
+      };
+    case "shako":
+      return {
+        d: "M -6.0 -3.2 L -6.8 -16.4 C -2.4 -17.6, 3.2 -17.6, 7.0 -16.4 L 6.2 -3.2 Z",
+        visor: "M 5.2 -3.8 L 10.6 -2.4 L 9.8 -1.4 L 4.8 -2.4 Z",
+        band: "M -6.2 -6.2 L 6.4 -6.2 M -6.8 -15.2 L 7.0 -15.2 M 0.4 -17.2 C 0.0 -20.2, 1.8 -21.6, 2.8 -20.0",
+      };
+    case "topHat":
+      return {
+        d: "M -5.8 -4.2 L -5.2 -15.4 C -1.8 -16.2, 3.0 -16.2, 6.0 -15.4 L 6.6 -4.2 Z M -9.6 -3.8 C -5.0 -5.6, 6.0 -5.6, 10.4 -3.6 L 10.0 -2.6 C 5.0 -4.4, -5.0 -4.4, -9.2 -2.8 Z",
+        band: "M -5.6 -6.4 L 6.4 -6.4",
+      };
+    case "wideBrim":
+      return {
+        d: "M -5.4 -4.6 C -5.6 -9.6, 5.2 -10.2, 5.8 -4.6 Z M -13.4 -3.4 C -7.0 -6.2, 7.0 -6.4, 14.2 -3.4 L 13.8 -2.4 C 7.0 -4.8, -7.0 -4.8, -13.0 -2.4 Z",
+        band: "M -5.4 -5.8 L 5.8 -5.8",
+      };
+    case "kepi":
+      return {
+        d: "M -6.2 -3.0 L -5.0 -11.2 C -1.0 -12.2, 4.0 -11.6, 6.2 -10.0 L 6.6 -3.0 Z",
+        visor: "M 5.6 -3.4 L 10.8 -2.0 L 10.0 -1.0 L 5.2 -2.2 Z",
+        band: "M -6.0 -5.0 L 6.6 -5.0",
+      };
+    case "headband":
+      return {
+        d: "M -6.4 7.2 C -8.6 1.0, -7.6 -5.8, -1.4 -7.8 C 3.6 -8.8, 6.8 -6.0, 6.0 -2.6 C 2.8 -4.6, -0.6 -3.6, -2.2 0.2 C -2.6 3.0, -2.0 6.2, -2.6 9.0 C -4.0 9.2, -5.6 8.6, -6.4 7.2 Z",
+        band: "M -6.6 -2.8 C -2.0 -4.4, 3.0 -4.4, 6.6 -2.6",
+      };
+    case "hairCurly":
+      return {
+        d: "M -7.6 3.2 C -10.4 0.2, -9.8 -6.2, -6.4 -7.8 C -5.4 -10.8, -0.2 -11.4, 2.0 -9.6 C 5.2 -10.8, 8.6 -7.6, 7.2 -4.6 C 4.4 -5.4, 0.4 -5.0, -1.8 -1.6 C -2.8 1.2, -3.0 3.8, -4.2 5.6 C -6.0 6.0, -7.2 4.8, -7.6 3.2 Z",
+      };
+    case "bowler":
+      return {
+        d: "M -5.8 -3.8 C -6.2 -10.6, 6.2 -10.6, 6.2 -3.8 Z M -8.4 -3.6 C -4.0 -5.0, 4.4 -5.0, 8.8 -3.4 L 8.4 -2.6 C 4.0 -4.0, -4.0 -4.0, -8.0 -2.8 Z",
+      };
+    case "hairWavy":
+      return {
+        d: "M -6.6 2.8 C -8.2 -2.8, -5.2 -8.4, 0.8 -8.0 C 4.6 -7.8, 7.0 -5.6, 6.4 -2.6 C 4.2 -3.8, 2.0 -2.8, 0.2 -4.0 C -1.6 -2.6, -2.6 0.4, -3.2 2.6 C -4.2 4.0, -5.6 4.0, -6.6 2.8 Z",
+      };
+    case "hairSide":
+      return {
+        d: "M -6.2 1.0 C -7.0 -4.6, -3.6 -7.8, 1.6 -7.6 C 4.8 -7.4, 6.6 -5.6, 6.2 -3.4 C 2.4 -3.8, -1.2 -4.8, -2.8 -0.4 C -3.8 1.6, -5.2 2.2, -6.2 1.0 Z",
+      };
     default:
       return null;
   }
@@ -420,11 +469,91 @@ export const ActorRig2D: React.FC<ActorRig2DProps> = ({
     const wr = j.wristF;
     behind.push(<path key="bag" d={`M ${f2(wr[0] - 4)} ${f2(wr[1] + 1)} h 8 l 1 8 h -10 Z`} fill={shade(PALETTE.grayBlue, 0.25)} {...common} />);
   }
+  if (has("musket")) {
+    const muzzle = torsoPt(j, 1.62, -6.4);
+    const butt = torsoPt(j, 0.05, -2.2);
+    behind.push(
+      <g key="musket">
+        <path d={limb([muzzle, lerpP(muzzle, butt, 0.7), butt], [0.8, 1.1, 2.4])} fill={T(PALETTE.deepBlue)} stroke="none" />
+        <path d={`M ${f2(muzzle[0])} ${f2(muzzle[1])} L ${f2(muzzle[0] + j.up[0] * 7)} ${f2(muzzle[1] + j.up[1] * 7)}`} stroke={T(PALETTE.deepBlueSoft)} strokeWidth={0.8} />
+      </g>,
+    );
+  }
+  if (has("rifleCarried")) {
+    // Held low across the body in both hands (never aimed, never a hero prop).
+    const a = j.wristF;
+    const b = j.wristN;
+    const dx = b[0] - a[0];
+    const dy = b[1] - a[1];
+    const l = Math.hypot(dx, dy) || 1;
+    const ux = dx / l;
+    const uy = dy / l;
+    const tail: Point = [a[0] - ux * 8, a[1] - uy * 8];
+    const tip: Point = [b[0] + ux * 26, b[1] + uy * 26];
+    front.push(<path key="rifleC" d={limb([tail, lerpP(tail, tip, 0.35), tip], [2.2, 1.2, 0.7])} fill={T(PALETTE.deepBlue)} stroke="none" />);
+  }
+  if (has("umbrella")) {
+    const wr = j.wristN;
+    const top: Point = [j.head[0] + 3, j.head[1] - 16];
+    const r = 17;
+    front.push(
+      <g key="umbrella">
+        <path d={`M ${f2(wr[0])} ${f2(wr[1])} L ${f2(top[0])} ${f2(top[1])}`} stroke={T(PALETTE.deepBlue)} strokeWidth={1.1} />
+        <path
+          d={`M ${f2(top[0] - r)} ${f2(top[1] + 5)} C ${f2(top[0] - r)} ${f2(top[1] - 9)}, ${f2(top[0] + r)} ${f2(top[1] - 9)}, ${f2(top[0] + r)} ${f2(top[1] + 5)} C ${f2(top[0] + r * 0.66)} ${f2(top[1] + 2)}, ${f2(top[0] + r * 0.33)} ${f2(top[1] + 2)}, ${f2(top[0])} ${f2(top[1] + 5)} C ${f2(top[0] - r * 0.33)} ${f2(top[1] + 2)}, ${f2(top[0] - r * 0.66)} ${f2(top[1] + 2)}, ${f2(top[0] - r)} ${f2(top[1] + 5)} Z`}
+          fill={T(mixColor(PALETTE.deepBlueSoft, PALETTE.grayBlue, 0.25))}
+          {...common}
+        />
+      </g>,
+    );
+  }
+  if (has("suitcase")) {
+    const wr = j.wristF;
+    behind.push(
+      <g key="suitcase">
+        <rect x={wr[0] - 9} y={wr[1] + 2.4} width={18} height={13} rx={1.4} fill={T(mixColor(PALETTE.grayBlue, PALETTE.deepBlueSoft, 0.45))} {...common} />
+        <path d={`M ${f2(wr[0] - 3)} ${f2(wr[1] + 2.6)} V ${f2(wr[1])} H ${f2(wr[0] + 3)} V ${f2(wr[1] + 2.6)} M ${f2(wr[0] - 9)} ${f2(wr[1] + 8)} H ${f2(wr[0] + 9)}`} fill="none" stroke={line} strokeWidth={lw} />
+      </g>,
+    );
+  }
+  if (has("bundle")) {
+    const c = torsoPt(j, 1.05, -6);
+    behind.push(<ellipse key="bundle" cx={c[0]} cy={c[1]} rx={9} ry={6.5} fill={T(mixColor(PALETTE.paperWarm, PALETTE.grayBlue, 0.4))} {...common} />);
+  }
+  if (has("lance")) {
+    const wr = j.wristN;
+    const top: Point = [wr[0] + 4, wr[1] - 88];
+    front.push(
+      <g key="lance">
+        <path d={`M ${f2(wr[0] - 1.5)} ${f2(wr[1] + 22)} L ${f2(top[0])} ${f2(top[1])}`} stroke={T(PALETTE.deepBlue)} strokeWidth={1.2} />
+        <path d={`M ${f2(top[0])} ${f2(top[1] + 6)} l 9 3 l -9 3 Z`} fill={T(PALETTE.skyBluePale)} stroke={line} strokeWidth={lw} />
+      </g>,
+    );
+  }
+  if (has("quill") && detail !== "map") {
+    const wr = j.wristN;
+    front.push(<path key="quill" d={`M ${f2(wr[0])} ${f2(wr[1])} q 4 -6 9 -9`} stroke={line} strokeWidth={0.8} fill="none" />);
+  }
   if (has("document") && detail !== "map") {
     const wr = j.wristN;
     front.push(<rect key="doc" x={wr[0] - 1} y={wr[1] - 5} width={6.4} height={8.4} fill={T(PALETTE.paperWarm)} {...common} transform={`rotate(-12 ${f2(wr[0])} ${f2(wr[1])})`} />);
   }
 
+  if (w.cape) {
+    const a = torsoPt(j, 0.98, -3.5);
+    const b = torsoPt(j, 0.98, 4);
+    const sway = Math.sin(clothPhase * Math.PI * 2) * 2.4;
+    const hemY = Math.max(j.kneeN[1], j.kneeF[1]) + 4;
+    const back = Math.min(j.pelvis[0], j.kneeF[0]) - 13 - pose.lean * 0.3;
+    behind.push(
+      <path
+        key="cape"
+        d={smoothClosed([b, a, [back + 2 + sway, j.pelvis[1] - 6], [back - 4 + sway * 1.6, hemY], [back + 12 + sway, hemY + 2], [j.pelvis[0] - 2, j.pelvis[1] - 4]], 2)}
+        fill={T(w.cape)}
+        {...common}
+      />,
+    );
+  }
   const handsMid = lerpP(j.wristN, j.wristF, 0.5);
   const trophy = held === "trophy" ? trophyLocal(1.7) : null;
 
@@ -457,6 +586,39 @@ export const ActorRig2D: React.FC<ActorRig2DProps> = ({
         </g>
       ) : null}
       {w.skirt <= 0.02 ? legsNear : null}
+      {w.poncho ? (
+        <path
+          d={smoothClosed(
+            [
+              torsoPt(j, 1.02, 3.2),
+              torsoPt(j, 0.9, 10.5 + pose.breadth * 3),
+              [torsoPt(j, 0.12, 13 + pose.breadth * 3)[0] + Math.sin(clothPhase * Math.PI * 2) * 1.2, torsoPt(j, 0.12, 13)[1]],
+              [torsoPt(j, 0.1, -14 - pose.breadth * 3)[0] + Math.sin(clothPhase * Math.PI * 2 + 1) * 1.6, torsoPt(j, 0.1, -14)[1]],
+              torsoPt(j, 0.9, -10.5 - pose.breadth * 3),
+              torsoPt(j, 1.02, -3.4),
+            ],
+            2,
+          )}
+          fill={T(w.poncho)}
+          {...common}
+        />
+      ) : null}
+      {w.poncho && detail !== "map" ? (
+        <path
+          d={`M ${f2(torsoPt(j, 0.32, 12)[0])} ${f2(torsoPt(j, 0.32, 12)[1])} L ${f2(torsoPt(j, 0.3, -13)[0])} ${f2(torsoPt(j, 0.3, -13)[1])} M ${f2(torsoPt(j, 0.22, 12.5)[0])} ${f2(torsoPt(j, 0.22, 12.5)[1])} L ${f2(torsoPt(j, 0.2, -13.5)[0])} ${f2(torsoPt(j, 0.2, -13.5)[1])}`}
+          stroke={shade(w.poncho, 0.45)}
+          strokeWidth={1.3}
+        />
+      ) : null}
+      {w.crossbelts && detail !== "map" ? (
+        <g clipPath={hatch || stripes ? `url(#${clipId})` : undefined}>
+          <path
+            d={`M ${f2(torsoPt(j, 0.98, -6)[0])} ${f2(torsoPt(j, 0.98, -6)[1])} L ${f2(torsoPt(j, 0.38, 6.5)[0])} ${f2(torsoPt(j, 0.38, 6.5)[1])} M ${f2(torsoPt(j, 0.98, 5)[0])} ${f2(torsoPt(j, 0.98, 5)[1])} L ${f2(torsoPt(j, 0.38, -6.5)[0])} ${f2(torsoPt(j, 0.38, -6.5)[1])}`}
+            stroke={T(w.crossbelts)}
+            strokeWidth={1.8}
+          />
+        </g>
+      ) : null}
       {w.belt && detail !== "map" ? (
         <path d={`M ${f2(torsoPt(j, 0.42, 6.2 * g + pose.breadth * 1.4)[0])} ${f2(torsoPt(j, 0.42, 6.2 * g + pose.breadth * 1.4)[1])} L ${f2(torsoPt(j, 0.42, -(6.2 * g + pose.breadth * 1.4))[0])} ${f2(torsoPt(j, 0.42, -(6.2 * g + pose.breadth * 1.4))[1])}`} stroke={T(w.belt)} strokeWidth={2.2} />
       ) : null}
@@ -477,6 +639,12 @@ export const ActorRig2D: React.FC<ActorRig2DProps> = ({
         <path d={smoothClosed(HEADS[w.head], 3)} fill={T(w.skin)} {...common} />
         {w.mustache && detail !== "map" ? (
           <path d="M 5.2 2.3 C 6.2 1.9, 7.2 2.0, 7.1 2.6 C 6.6 3.3, 5.6 3.2, 5.0 3.0 Z" fill={line} />
+        ) : null}
+        {w.beard && detail !== "map" ? (
+          <path d="M 6.0 1.6 C 6.6 3.6, 6.0 6.2, 3.6 7.4 C 1.0 8.0, -1.6 6.4, -2.4 4.2 C -0.4 4.8, 2.2 4.2, 3.4 2.6 C 4.4 2.8, 5.4 2.4, 6.0 1.6 Z" fill={shade(w.hatColor, 0.2)} />
+        ) : null}
+        {w.faceLines && detail === "hero" ? (
+          <path d={w.faceLines} fill="none" stroke={line} strokeWidth={0.7} strokeLinecap="round" />
         ) : null}
         {w.mask === "gas" ? (
           <g>

@@ -22,6 +22,8 @@ const squadA = columnTracks({
   files: 2,
   ranks: 6,
   head: [
+    // Film: the column already marches before 1700 (entry from the 1975 corridor).
+    { f: 1640, x: 3180, y: 2410 },
     { f: 1700, x: 3330, y: 2410 },
     { f: 1812, x: 3610, y: 2410, ease: "institutionalLock" },
     { f: 1822, x: 3625, y: 2410 },
@@ -34,7 +36,7 @@ const squadA = columnTracks({
   seed: 11,
   action: "march",
   after: (i) => [{ f: 1818 + (i % 3), action: "guard", breadth: 0.55, blend: 8 }],
-  life: { from: 1700, to: 1900, enter: "none", exit: "fold", exitDur: 22 },
+  life: { from: 1640, to: 1900, enter: "rise", enterDur: 12, exit: "fold", exitDur: 22 },
 });
 
 /** Squad B arrives in front of the institution and opens to reveal Videla. */
@@ -44,6 +46,7 @@ const squadB = columnTracks({
   files: 2,
   ranks: 5,
   head: [
+    { f: 1640, x: 3508, y: 2414 },
     { f: 1700, x: 3700, y: 2414 },
     { f: 1764, x: 3905, y: 2414, ease: "institutionalLock" },
     { f: 1770, x: 3910, y: 2414 },
@@ -64,7 +67,7 @@ const squadB = columnTracks({
     { f: 1770 + rank * 2, action: rank < 3 ? "walk" : "stand", blend: 6 },
     { f: 1791 + rank * 2, action: "guard", breadth: 0.6, blend: 8 },
   ],
-  life: { from: 1700, to: 1898, enter: "none", exit: "fold", exitDur: 22 },
+  life: { from: 1640, to: 1898, enter: "rise", enterDur: 12, exit: "fold", exitDur: 22 },
 });
 
 /** Riot line with gas masks and shields that closes the avenue (the civic line is cut). */
@@ -172,14 +175,15 @@ const civilians: ActorTrack[] = [
     seed: 101,
     role: "context",
     pos: [
+      { f: 1690, x: 3506, y: 2610 },
       { f: 1722, x: 3420, y: 2612 },
       { f: 1800, x: 3210, y: 2618 },
     ],
     actions: [
-      { f: 1722, action: "walk", facing: -1 },
+      { f: 1690, action: "walk", facing: -1 },
       { f: 1760, action: "retreat", facing: -1 },
     ],
-    life: { from: 1722, to: 1800, enter: "none", exit: "fade", exitDur: 12 },
+    life: { from: 1690, to: 1800, enter: "rise", enterDur: 12, exit: "fade", exitDur: 12 },
   },
   {
     id: "civ.2",
@@ -190,14 +194,15 @@ const civilians: ActorTrack[] = [
     seed: 113,
     role: "context",
     pos: [
+      { f: 1690, x: 3546, y: 2620 },
       { f: 1722, x: 3460, y: 2622 },
       { f: 1796, x: 3262, y: 2628 },
     ],
     actions: [
-      { f: 1722, action: "walk", facing: -1 },
+      { f: 1690, action: "walk", facing: -1 },
       { f: 1748, action: "retreat", facing: -1 },
     ],
-    life: { from: 1722, to: 1796, enter: "none", exit: "fade", exitDur: 12 },
+    life: { from: 1690, to: 1796, enter: "rise", enterDur: 12, exit: "fade", exitDur: 12 },
   },
   {
     id: "civ.3",
@@ -208,14 +213,15 @@ const civilians: ActorTrack[] = [
     seed: 127,
     role: "context",
     pos: [
+      { f: 1690, x: 3640, y: 2330 },
       { f: 1722, x: 3560, y: 2330 },
       { f: 1790, x: 3390, y: 2328 },
     ],
     actions: [
-      { f: 1722, action: "walk", facing: -1 },
+      { f: 1690, action: "walk", facing: -1 },
       { f: 1752, action: "retreat", facing: -1 },
     ],
-    life: { from: 1722, to: 1790, enter: "none", exit: "fade", exitDur: 14 },
+    life: { from: 1690, to: 1790, enter: "rise", enterDur: 12, exit: "fade", exitDur: 14 },
   },
   // Waits at the bus stop (node d), then leaves: the node is removed after.
   {
@@ -272,11 +278,12 @@ const foreground1976: ActorTrack[] = [
     seed: 3,
     role: "context",
     pos: [
+      { f: 1680, x: 3195, y: 2745 },
       { f: 1722, x: 3296, y: 2745 },
       { f: 1806, x: 3498, y: 2745 },
     ],
-    actions: [{ f: 1722, action: "march", facing: 1 }],
-    life: { from: 1722, to: 1806, enter: "none", exit: "none" },
+    actions: [{ f: 1680, action: "march", facing: 1 }],
+    life: { from: 1680, to: 1806, enter: "none", exit: "none" },
   },
   {
     id: "fg.soldier.2",
@@ -287,11 +294,12 @@ const foreground1976: ActorTrack[] = [
     seed: 17,
     role: "context",
     pos: [
+      { f: 1680, x: 3127, y: 2732 },
       { f: 1722, x: 3228, y: 2732 },
       { f: 1806, x: 3430, y: 2732 },
     ],
-    actions: [{ f: 1722, action: "march", facing: 1 }],
-    life: { from: 1722, to: 1806, enter: "none", exit: "none" },
+    actions: [{ f: 1680, action: "march", facing: 1 }],
+    life: { from: 1680, to: 1806, enter: "none", exit: "none" },
   },
   {
     id: "fg.riot.1",
@@ -336,9 +344,9 @@ export interface VehicleTrack {
 }
 
 export const VEHICLES_1976: readonly VehicleTrack[] = [
-  { id: "truck.1", kind: "truck", scale: 1.05, tone: 0.05, pos: [{ f: 1700, x: 3180, y: 2528 }, { f: 1808, x: 3470, y: 2528, ease: "institutionalLock" }, { f: 1900, x: 3474, y: 2528 }], life: { from: 1700, to: 1900 } },
-  { id: "truck.2", kind: "truck", scale: 1.05, tone: 0.12, pos: [{ f: 1700, x: 2960, y: 2528 }, { f: 1812, x: 3280, y: 2528, ease: "institutionalLock" }, { f: 1900, x: 3282, y: 2528 }], life: { from: 1700, to: 1900 } },
-  { id: "jeep.1", kind: "jeep", scale: 1.0, tone: 0.02, pos: [{ f: 1700, x: 3550, y: 2520 }, { f: 1782, x: 3808, y: 2520, ease: "institutionalLock" }, { f: 1900, x: 3810, y: 2520 }], life: { from: 1700, to: 1900 } },
+  { id: "truck.1", kind: "truck", scale: 1.05, tone: 0.05, pos: [{ f: 1640, x: 3018, y: 2528 }, { f: 1700, x: 3180, y: 2528 }, { f: 1808, x: 3470, y: 2528, ease: "institutionalLock" }, { f: 1900, x: 3474, y: 2528 }], life: { from: 1640, to: 1900 } },
+  { id: "truck.2", kind: "truck", scale: 1.05, tone: 0.12, pos: [{ f: 1640, x: 2788, y: 2528 }, { f: 1700, x: 2960, y: 2528 }, { f: 1812, x: 3280, y: 2528, ease: "institutionalLock" }, { f: 1900, x: 3282, y: 2528 }], life: { from: 1640, to: 1900 } },
+  { id: "jeep.1", kind: "jeep", scale: 1.0, tone: 0.02, pos: [{ f: 1640, x: 3361, y: 2520 }, { f: 1700, x: 3550, y: 2520 }, { f: 1782, x: 3808, y: 2520, ease: "institutionalLock" }, { f: 1900, x: 3810, y: 2520 }], life: { from: 1640, to: 1900 } },
   // A dark saloon passes slowly at the removal beat (no victims shown).
   { id: "sedan.1", kind: "sedan", scale: 1.0, tone: 0.1, pos: [{ f: 1806, x: 3250, y: 2548 }, { f: 1856, x: 3760, y: 2548 }], life: { from: 1806, to: 1856 } },
 ];
@@ -516,9 +524,21 @@ export const ACTORS_MALVINAS: readonly ActorTrack[] = [
       pos: [
         { f: 2146, x: 5852 + i * 42, y: 2974 + (i % 2) * 10 },
         { f: 2190, x: 5812 + i * 42, y: 2974 + (i % 2) * 10 },
+        // Full film only (after the benchmark window): the file reaches the
+        // ridge, one helps another up, two plant and hold the flag.
+        ...(i === 1 ? [{ f: 2204, x: 5842, y: 2986 }] : i === 0 ? [{ f: 2200, x: 5800, y: 2972 }] : [{ f: 2198, x: 5800 + i * 40, y: 2970 + (i % 2) * 8 }]),
       ],
-      actions: [{ f: 2146, action: "wind", facing: -1 }],
-      life: { from: 2146 + i * 3, to: 2190, enter: "rise", enterDur: 16, exit: "none" },
+      actions: [
+        { f: 2146, action: "wind", facing: -1 },
+        ...(i === 0
+          ? [{ f: 2200, action: "help" as const, facing: 1 as const, blend: 8 }, { f: 2214, action: "guard" as const, facing: -1 as const, blend: 10 }]
+          : i === 1
+            ? [{ f: 2204, action: "stand" as const, facing: -1 as const, blend: 8 }, { f: 2216, action: "guard" as const, facing: -1 as const }]
+            : i === 2 || i === 3
+              ? [{ f: 2196 + (i - 2) * 3, action: "hoist" as const, facing: -1 as const, dur: 18, blend: 8 }]
+              : [{ f: 2198, action: "guard" as const, facing: -1 as const, breadth: 0.6, blend: 8 }]),
+      ],
+      life: { from: 2146 + i * 3, to: 2240, enter: "rise", enterDur: 16, exit: "fold", exitDur: 16 },
     }),
   ),
   ...[0, 1, 2].map(
@@ -535,7 +555,7 @@ export const ACTORS_MALVINAS: readonly ActorTrack[] = [
         { f: 2190, x: geo(58.36 + i * 0.06, 51.66)[0], y: geo(58.25, 51.66 + i * 0.02)[1] },
       ],
       actions: [{ f: 2152, action: "wind", facing: -1 }],
-      life: { from: 2152 + i * 3, to: 2190, enter: "rise", enterDur: 14, exit: "none" },
+      life: { from: 2152 + i * 3, to: 2236, enter: "rise", enterDur: 14, exit: "fold" },
     }),
   ),
 ];

@@ -273,3 +273,137 @@ export const flagHoldPose = (raise: number, breathPhase: number): Pose => {
 
 /** Blend helper exported for tracks. */
 export const blendPoses = lerpPose;
+
+/* ------------------------------------------------ full-film additions */
+
+/**
+ * Seated on horseback. The horse carries the motion; the rider only sways
+ * with the gait phase (hip/knee fixed around the barrel).
+ */
+export const ridePose = (phase: number, breadth = 0.3, reins = 1): Pose => {
+  const a = phase * TAU;
+  return {
+    ...NEUTRAL,
+    breadth,
+    lean: 4 + 2 * Math.sin(a * 2),
+    head: -2 + Math.sin(a * 2 + 0.6),
+    hipN: 64,
+    kneeN: 88,
+    footN: -6,
+    hipF: 60,
+    kneeF: 84,
+    footF: -6,
+    shN: 22 * reins,
+    elN: 58 * reins + 8,
+    shF: 14 * reins,
+    elF: 60 * reins + 8,
+    bob: 0,
+  };
+};
+
+/** Both arms raised in a wide V (balcony greeting); `a` 0..1 raise. */
+export const armsRaisedPose = (a: number, breathPhase: number, breadth = 0.95): Pose => {
+  const t = smooth(a);
+  const b = Math.sin(breathPhase * TAU);
+  return {
+    ...NEUTRAL,
+    breadth,
+    lean: -1.5 * t,
+    head: -6 * t,
+    hipN: 3,
+    hipF: -3,
+    shN: -3 + (148 + 4 * b + 3) * t,
+    elN: 8 + 6 * t,
+    shF: 3 + (140 - 4 * b - 3) * t,
+    elF: 8 + 8 * t,
+  };
+};
+
+/** Writing/signing at a lectern: torso bent, near hand moving. */
+export const writePose = (phase: number): Pose => {
+  const a = phase * TAU;
+  return {
+    ...NEUTRAL,
+    breadth: 0.35,
+    lean: 22,
+    head: 16,
+    hipN: 4,
+    hipF: -2,
+    shN: 52 + 4 * Math.sin(a * 3),
+    elN: 52 + 6 * Math.sin(a * 3 + 1),
+    shF: 34,
+    elF: 60,
+  };
+};
+
+/** Dribbling run: run gait, torso lower, arms out for balance. */
+export const dribblePose = (phase: number, lean = 14): Pose => {
+  const run = gaitPose(phase, "run", 0.4);
+  return {
+    ...run,
+    lean,
+    head: 8,
+    shN: run.shN * 0.6 - 18,
+    elN: 30,
+    shF: run.shF * 0.6 + 22,
+    elF: 34,
+  };
+};
+
+/** Embrace: arms wrapped forward around a teammate. */
+export const embracePose = (breathPhase: number, amount = 1): Pose => {
+  const t = smooth(amount);
+  const b = Math.sin(breathPhase * TAU);
+  return {
+    ...NEUTRAL,
+    breadth: 0.4,
+    lean: 10 * t + b,
+    head: 8 * t,
+    hipN: 8,
+    hipF: -6,
+    kneeN: 8,
+    shN: 72 * t,
+    elN: 70 * t,
+    shF: 82 * t,
+    elF: 64 * t,
+  };
+};
+
+/** Pointing ahead with the near arm (command, guidance). */
+export const pointPose = (p: number, breathPhase: number): Pose => {
+  const base = standPose(breathPhase, 0.45);
+  const t = smooth(p);
+  return { ...base, shN: base.shN + (92 - base.shN) * t, elN: base.elN * (1 - t) + 2 * t, head: base.head - 4 * t };
+};
+
+/** Arms held to carry something low in both hands (crates, a folded flag). */
+export const carryPose = (phase: number, style: GaitStyle = "walk"): Pose => {
+  const g = gaitPose(phase, style, 0.4);
+  return { ...g, lean: g.lean + 4, shN: 26, elN: 64, shF: 20, elF: 70 };
+};
+
+/** Arms up holding a long pole with both hands (planting/raising a flag). */
+export const hoistPose = (raise: number, breathPhase: number): Pose => {
+  const t = smooth(raise);
+  const b = Math.sin(breathPhase * TAU);
+  return {
+    ...NEUTRAL,
+    breadth: 0.55,
+    lean: 10 - 12 * t + b,
+    head: 6 - 16 * t,
+    hipN: 20,
+    kneeN: 24 - 14 * t,
+    hipF: -14,
+    kneeF: 6,
+    shN: 70 + 90 * t,
+    elN: 30 - 20 * t,
+    shF: 40 + 110 * t,
+    elF: 50 - 34 * t,
+  };
+};
+
+/** Helping another: leaning down, near arm extended low. */
+export const helpPose = (breathPhase: number): Pose => {
+  const b = Math.sin(breathPhase * TAU);
+  return { ...NEUTRAL, breadth: 0.45, lean: 30 + b, head: 18, hipN: 34, kneeN: 40, hipF: -8, kneeF: 16, shN: 68, elN: 12, shF: 30, elF: 40 };
+};

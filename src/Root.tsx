@@ -6,6 +6,7 @@ import { DEBUG } from "./debug/debug-config";
 import { RigLab } from "./debug/RigLab";
 import { BenchmarkV2 } from "./compositions/BenchmarkV2";
 import { BENCHMARK_V2 } from "./timeline/benchmark-v2-timeline";
+import { ArgentinaFull, FILM } from "./film/ArgentinaFull";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -27,6 +28,15 @@ export const RemotionRoot: React.FC = () => {
         width={BENCHMARK_COMPOSITION.width}
         height={BENCHMARK_COMPOSITION.height}
         defaultProps={{ debug: DEBUG }}
+      />
+      <Composition
+        id={FILM.id}
+        component={ArgentinaFull}
+        durationInFrames={FILM.durationInFrames}
+        fps={FILM.fps}
+        width={FILM.width}
+        height={FILM.height}
+        defaultProps={{ debug: false }}
       />
       <Composition
         id="Dev-RigLab"
